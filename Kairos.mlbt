@@ -1,0 +1,80 @@
+[
+	{
+		"version": "1.0.0"
+	},
+	{
+		"uuid": "16f188f3-ce6e-4cd9-af6b-99964fa8f1ee",
+		"name": "Kairos",
+		"description": "",
+		"children": [
+			{
+				"id": "83ac086a-69af-46cc-a8d3-0c3db5934f1c",
+				"activated": true,
+				"type": "sequence",
+				"metadata": {
+					"label": "",
+					"itemTemplate": "BTSequenceNode.qml"
+				},
+				"properties": {},
+				"children": [
+					{
+						"id": "49d41e9b-b758-45c0-b352-aff2702dd798",
+						"activated": true,
+						"type": "embedded",
+						"metadata": {
+							"label": "",
+							"itemTemplate": "BTEmbeddedNode.qml"
+						},
+						"properties": {
+							"behavior": {
+								"value": "KairosInitialisation",
+								"type": "uriPath"
+							},
+							"inputParams": []
+						},
+						"children": []
+					},
+					{
+						"id": "9d46217d-b93e-4932-980e-5f2d772f32b6",
+						"activated": true,
+						"type": "until",
+						"metadata": {
+							"label": "",
+							"itemTemplate": "BTUntilNode.qml"
+						},
+						"properties": {
+							"op1": {
+								"value": "true",
+								"type": "boolean"
+							},
+							"op2": {
+								"value": "false",
+								"type": "boolean"
+							},
+							"op": "=="
+						},
+						"children": [
+							{
+								"id": "c43ea9ff-391b-44a4-a516-46dcd35cc23d",
+								"activated": false,
+								"type": "embedded",
+								"metadata": {
+									"label": "",
+									"itemTemplate": "BTEmbeddedNode.qml"
+								},
+								"properties": {
+									"behavior": {
+										"value": "KairosUpdate",
+										"type": "uriPath"
+									},
+									"inputParams": []
+								},
+								"children": []
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

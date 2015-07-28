@@ -1,0 +1,47 @@
+[
+	{
+		"version": "1.0.0"
+	},
+	{
+		"uuid": "3babbede-92c0-49ee-9b3a-8f90409cd98e",
+		"name": "KairosActivity",
+		"description": "",
+		"children": [
+			{
+				"id": "0a9bcb12-1dbe-47d2-963f-4b3a11b3f96b",
+				"activated": true,
+				"type": "priority",
+				"metadata": {
+					"label": "",
+					"itemTemplate": "BTSelectorPrio.qml"
+				},
+				"properties": {
+					"active": "false"
+				},
+				"children": [
+					{
+						"id": "a9d25c64-9058-4448-b253-a490a25844ca",
+						"activated": true,
+						"type": "action",
+						"metadata": {
+							"label": "",
+							"itemTemplate": "BTActionNode.qml"
+						},
+						"properties": {
+							"name": "wait",
+							"inputParams": [
+								{
+									"key": "time",
+									"value": "10",
+									"type": "integer"
+								}
+							],
+							"outputParams": []
+						},
+						"children": []
+					}
+				]
+			}
+		]
+	}
+]
