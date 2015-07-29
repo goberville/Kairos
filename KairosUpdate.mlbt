@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "94174cfa-3151-47f8-8812-c8c8b0f6bf20",
+    "uuid": "c0316661-1a7e-40b0-b6a9-d7891372b650",
     "name": "KairosUpdate",
     "description": "",
     "children": [
@@ -74,12 +74,33 @@
                           "name": "GestionEvent",
                           "inputParams": [
                             {
-                              "key": "message",
-                              "value": "tt",
-                              "type": "string"
+                              "key": "EventID",
+                              "value": "",
+                              "type": "entityKnowledge"
                             }
                           ],
-                          "outputParams": []
+                          "outputParams": [
+                            {
+                              "key": "EventID",
+                              "value": "EventID",
+                              "type": "entityKnowledge"
+                            },
+                            {
+                              "key": "DateReunion",
+                              "value": "DateReunion",
+                              "type": "entityKnowledge"
+                            },
+                            {
+                              "key": "GeolocalisationReunion",
+                              "value": "GeolocalisationReunion",
+                              "type": "entityKnowledge"
+                            },
+                            {
+                              "key": "GeolocalisationUser",
+                              "value": "GeolocalisationUser",
+                              "type": "entityKnowledge"
+                            }
+                          ]
                         },
                         "children": []
                       },
@@ -105,8 +126,8 @@
                             },
                             "properties": {
                               "op1": {
-                                "value": "DateRendezVous",
-                                "type": "string"
+                                "value": "DateReunion",
+                                "type": "entityKnowledge"
                               },
                               "op2": {
                                 "value": "DateTraitement",
