@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "c0316661-1a7e-40b0-b6a9-d7891372b650",
+    "uuid": "5210fbce-dbda-42a3-a792-3073afd8871b",
     "name": "KairosUpdate",
     "description": "",
     "children": [
@@ -74,9 +74,9 @@
                           "name": "GestionEvent",
                           "inputParams": [
                             {
-                              "key": "EventID",
-                              "value": "",
-                              "type": "entityKnowledge"
+                              "key": "message",
+                              "value": "ttt",
+                              "type": "string"
                             }
                           ],
                           "outputParams": [
