@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "1a2e9384-d53e-49bd-be52-94bb5b84c3dc",
+    "uuid": "a76d428c-f809-437e-8675-61b3c5f0bd8c",
     "name": "KairosInitialisation",
     "description": "",
     "children": [
@@ -50,23 +50,6 @@
             },
             "properties": {},
             "children": [
-              {
-                "id": "57f5156c-19fa-4745-9307-2f3615055a57",
-                "activated": true,
-                "type": "set",
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTSetNode.qml"
-                },
-                "properties": {
-                  "destination": "CurrenteDate",
-                  "op": {
-                    "value": "CurrenteDateSimuled",
-                    "type": "entityKnowledge"
-                  }
-                },
-                "children": []
-              },
               {
                 "id": "17f6b35f-0138-4dee-b876-c57c152373f4",
                 "activated": true,
