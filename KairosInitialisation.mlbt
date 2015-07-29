@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "a76d428c-f809-437e-8675-61b3c5f0bd8c",
+    "uuid": "84fe82f0-9c27-4e75-a80e-3acab4c08c3a",
     "name": "KairosInitialisation",
     "description": "",
     "children": [
@@ -64,7 +64,7 @@
                     "type": "entityKnowledge"
                   },
                   "op2": {
-                    "value": "true",
+                    "value": "false",
                     "type": "boolean"
                   },
                   "op": "=="
