@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "9a93628e-c084-4fb3-8719-d9c71a17dc0e",
+    "uuid": "38979376-c8e6-4466-85b6-76dfe99fe4e3",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -31,23 +31,6 @@
                 "value": "false",
                 "type": "boolean"
               }
-            },
-            "children": []
-          },
-          {
-            "id": "49d41e9b-b758-45c0-b352-aff2702dd798",
-            "activated": false,
-            "type": "embedded",
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTEmbeddedNode.qml"
-            },
-            "properties": {
-              "behavior": {
-                "value": "KairosInitialisation",
-                "type": "uriPath"
-              },
-              "inputParams": []
             },
             "children": []
           },
