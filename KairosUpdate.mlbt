@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "43f581dd-33d2-4c2e-b9c4-7c1efbfca50d",
+    "uuid": "fc747b3f-6bad-4d7c-8467-4b1cdf38516c",
     "name": "KairosUpdate",
     "description": "",
     "children": [
@@ -232,7 +232,7 @@
           },
           {
             "id": "6c7afa76-7527-48fe-a8f2-78b579bc86ed",
-            "activated": true,
+            "activated": false,
             "type": "priority",
             "metadata": {
               "label": "",
@@ -244,7 +244,7 @@
             "children": [
               {
                 "id": "b5bf81c7-bbf0-4fa5-9287-25f1a6fb61c2",
-                "activated": true,
+                "activated": false,
                 "type": "condition",
                 "metadata": {
                   "label": "",
@@ -265,7 +265,7 @@
               },
               {
                 "id": "b48ec307-308c-4ccc-b7f1-f71553f9cc02",
-                "activated": true,
+                "activated": false,
                 "type": "condition",
                 "metadata": {
                   "label": "",
@@ -285,7 +285,7 @@
                 "children": [
                   {
                     "id": "35e576cd-1832-4c06-83c3-07c1de0578a1",
-                    "activated": true,
+                    "activated": false,
                     "type": "embedded",
                     "metadata": {
                       "label": "",
