@@ -1,10 +1,87 @@
 [
   {
-    "version": "0.1.2"
+    "version": "1.0.0"
   },
   {
-    "id": "820503cb-c538-4667-94cd-b36d0b212a7f",
-    "name": "43b6e1ff-53fd-410b-88cc-bbc5eb513418",
-    "children": []
+    "uuid": "1857154a-7781-4a62-908e-4219800b234e",
+    "name": "KairosCheckACtivity",
+    "description": "",
+    "children": [
+      {
+        "id": "3a6e8e26-695c-47d9-9d89-3f0de2f0af87",
+        "activated": true,
+        "type": "parallel",
+        "metadata": {
+          "label": "",
+          "itemTemplate": "BTParallelNode.qml"
+        },
+        "properties": {
+          "statusCondition": "failsIfAnyFails",
+          "retryPolicy": "propagateToRunning"
+        },
+        "children": [
+          {
+            "id": "cc094b9a-3336-4fd5-9bdb-9b908648d6a6",
+            "activated": true,
+            "type": "until",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTUntilNode.qml"
+            },
+            "properties": {
+              "op1": {
+                "value": "true",
+                "type": "boolean"
+              },
+              "op2": {
+                "value": "false",
+                "type": "boolean"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "id": "53e9c0a7-ea1c-4571-a733-1a7d479097b8",
+                "activated": true,
+                "type": "sequence",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "id": "9809a9e9-d127-4b29-acb9-cbfdbd751ccb",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "GestionEvent",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "GestionEvent",
+                      "inputParams": [
+                        {
+                          "key": "EventID",
+                          "value": "",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateReunion",
+                          "value": "",
+                          "type": "string"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
