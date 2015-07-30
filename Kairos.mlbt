@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "cca422f7-01ad-43ea-9f90-bbda4f66a474",
+    "uuid": "0d6f1e4a-62de-4331-84bb-0119262057d1",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -17,23 +17,6 @@
         },
         "properties": {},
         "children": [
-          {
-            "id": "b3393b0e-dc34-407a-ba3a-d190651a963c",
-            "activated": true,
-            "type": "set",
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSetNode.qml"
-            },
-            "properties": {
-              "destination": "init",
-              "op": {
-                "value": "false",
-                "type": "boolean"
-              }
-            },
-            "children": []
-          },
           {
             "id": "9d46217d-b93e-4932-980e-5f2d772f32b6",
             "activated": true,
@@ -55,19 +38,28 @@
             },
             "children": [
               {
-                "id": "c43ea9ff-391b-44a4-a516-46dcd35cc23d",
+                "id": "29ca6cde-70a5-4906-b254-f428af7ad817",
                 "activated": true,
-                "type": "embedded",
+                "type": "action",
                 "metadata": {
                   "label": "",
-                  "itemTemplate": "BTEmbeddedNode.qml"
+                  "itemTemplate": "BTActionNode.qml"
                 },
                 "properties": {
-                  "behavior": {
-                    "value": "KairosCheckACtivity",
-                    "type": "uriPath"
-                  },
-                  "inputParams": []
+                  "name": "GestionEvent",
+                  "inputParams": [
+                    {
+                      "key": "EventID",
+                      "value": "EventID",
+                      "type": "entityKnowledge"
+                    },
+                    {
+                      "key": "DateReunion",
+                      "value": "DateReunion",
+                      "type": "entityKnowledge"
+                    }
+                  ],
+                  "outputParams": []
                 },
                 "children": []
               }
