@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "0d6f1e4a-62de-4331-84bb-0119262057d1",
+    "uuid": "ad06b234-4127-4d85-8c33-dfb3b4ffc186",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -38,28 +38,19 @@
             },
             "children": [
               {
-                "id": "29ca6cde-70a5-4906-b254-f428af7ad817",
+                "id": "027f14f5-067f-4854-94b2-f9437a5fb8bf",
                 "activated": true,
-                "type": "action",
+                "type": "embedded",
                 "metadata": {
                   "label": "",
-                  "itemTemplate": "BTActionNode.qml"
+                  "itemTemplate": "BTEmbeddedNode.qml"
                 },
                 "properties": {
-                  "name": "GestionEvent",
-                  "inputParams": [
-                    {
-                      "key": "EventID",
-                      "value": "EventID",
-                      "type": "entityKnowledge"
-                    },
-                    {
-                      "key": "DateReunion",
-                      "value": "DateReunion",
-                      "type": "entityKnowledge"
-                    }
-                  ],
-                  "outputParams": []
+                  "behavior": {
+                    "value": "KairosCheckACtivity",
+                    "type": "uriPath"
+                  },
+                  "inputParams": []
                 },
                 "children": []
               }
