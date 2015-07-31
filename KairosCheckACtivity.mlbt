@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "0345b19e-811e-4afc-ba29-b307dafda05f",
+    "uuid": "b4365b61-72da-4274-9fa1-c0a511ed92af",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -72,9 +72,63 @@
                           "type": "entityKnowledge"
                         }
                       ],
-                      "outputParams": []
+                      "outputParams": [
+                        {
+                          "key": "EventID",
+                          "value": "EventID",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateReunion",
+                          "value": "DateReunion",
+                          "type": "entityKnowledge"
+                        }
+                      ]
                     },
                     "children": []
+                  },
+                  {
+                    "id": "40acb0de-0a4b-4000-9829-6c09fe554a2a",
+                    "activated": true,
+                    "type": "condition",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
+                    },
+                    "properties": {
+                      "op1": {
+                        "value": "EventFindActivity",
+                        "type": "entityKnowledge"
+                      },
+                      "op2": {
+                        "value": "true",
+                        "type": "boolean"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "id": "26768819-e86d-4b76-8250-e75c1f8448d1",
+                        "activated": true,
+                        "type": "condition",
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTConditionNode.qml"
+                        },
+                        "properties": {
+                          "op1": {
+                            "value": "DateReunion",
+                            "type": "entityKnowledge"
+                          },
+                          "op2": {
+                            "value": "DateTraitement",
+                            "type": "entityKnowledge"
+                          },
+                          "op": "<"
+                        },
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               }
