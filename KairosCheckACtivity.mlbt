@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "bea4c142-00b9-419f-82da-74dcd7226178",
+    "uuid": "c4ddff73-3ff1-495b-9cf7-6e2e87e8f7ec",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -50,6 +50,23 @@
                 },
                 "properties": {},
                 "children": [
+                  {
+                    "id": "f68660e3-d759-4221-8f34-d66506c959f3",
+                    "activated": true,
+                    "type": "set",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSetNode.qml"
+                    },
+                    "properties": {
+                      "destination": "EventFind",
+                      "op": {
+                        "value": "false",
+                        "type": "boolean"
+                      }
+                    },
+                    "children": []
+                  },
                   {
                     "id": "4c160208-fba0-4f3a-a373-47b818e431ea",
                     "activated": true,
@@ -113,7 +130,7 @@
                       "itemTemplate": "BTSelectorPrio.qml"
                     },
                     "properties": {
-                      "active": "false"
+                      "active": "true"
                     },
                     "children": [
                       {
@@ -133,30 +150,49 @@
                             "value": "DateEmpty",
                             "type": "entityKnowledge"
                           },
-                          "op": "=="
+                          "op": "!="
                         },
-                        "children": []
-                      },
-                      {
-                        "id": "40acb0de-0a4b-4000-9829-6c09fe554a2a",
-                        "activated": true,
-                        "type": "condition",
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
-                        },
-                        "properties": {
-                          "op1": {
-                            "value": "DateReunion",
-                            "type": "entityKnowledge"
-                          },
-                          "op2": {
-                            "value": "CurrenteDate",
-                            "type": "entityKnowledge"
-                          },
-                          "op": "<"
-                        },
-                        "children": []
+                        "children": [
+                          {
+                            "id": "40acb0de-0a4b-4000-9829-6c09fe554a2a",
+                            "activated": true,
+                            "type": "condition",
+                            "metadata": {
+                              "label": "",
+                              "itemTemplate": "BTConditionNode.qml"
+                            },
+                            "properties": {
+                              "op1": {
+                                "value": "DateReunion",
+                                "type": "entityKnowledge"
+                              },
+                              "op2": {
+                                "value": "CurrenteDate",
+                                "type": "entityKnowledge"
+                              },
+                              "op": ">="
+                            },
+                            "children": [
+                              {
+                                "id": "e1c86130-bd33-47c0-9a60-9d57d04d720f",
+                                "activated": true,
+                                "type": "set",
+                                "metadata": {
+                                  "label": "",
+                                  "itemTemplate": "BTSetNode.qml"
+                                },
+                                "properties": {
+                                  "destination": "EventFind",
+                                  "op": {
+                                    "value": "true",
+                                    "type": "boolean"
+                                  }
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "id": "b535e89f-63d5-4556-82bc-24f9949125b6",
@@ -191,25 +227,63 @@
                         "children": []
                       }
                     ]
-                  },
-                  {
-                    "id": "1a7f3dfd-3dc1-4563-9b81-e24bc0611859",
-                    "activated": true,
-                    "type": "set",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTSetNode.qml"
-                    },
-                    "properties": {
-                      "destination": "EventFind",
-                      "op": {
-                        "value": "true",
-                        "type": "boolean"
-                      }
-                    },
-                    "children": []
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "id": "018620ef-67a8-47a9-8bb8-512436aec46a",
+            "activated": true,
+            "type": "priority",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSelectorPrio.qml"
+            },
+            "properties": {
+              "active": "false"
+            },
+            "children": [
+              {
+                "id": "775228f6-dc85-43ff-b382-fd9d4db0e8df",
+                "activated": true,
+                "type": "condition",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTConditionNode.qml"
+                },
+                "properties": {
+                  "op1": {
+                    "value": "EventFind",
+                    "type": "entityKnowledge"
+                  },
+                  "op2": {
+                    "value": "false",
+                    "type": "boolean"
+                  },
+                  "op": "=="
+                },
+                "children": []
+              },
+              {
+                "id": "88637faa-d522-4062-b89d-2f5c060707a6",
+                "activated": true,
+                "type": "action",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTActionNode.qml"
+                },
+                "properties": {
+                  "name": "TraitementEvent",
+                  "inputParams": [
+                    {
+                      "value": "",
+                      "type": "string"
+                    }
+                  ],
+                  "outputParams": []
+                },
+                "children": []
               }
             ]
           }
