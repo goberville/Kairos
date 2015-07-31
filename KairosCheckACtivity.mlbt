@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "b4365b61-72da-4274-9fa1-c0a511ed92af",
+    "uuid": "3c746201-c593-427c-b4d6-53345a0e1dab",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -51,6 +51,23 @@
                 "properties": {},
                 "children": [
                   {
+                    "id": "4c160208-fba0-4f3a-a373-47b818e431ea",
+                    "activated": true,
+                    "type": "set",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSetNode.qml"
+                    },
+                    "properties": {
+                      "destination": "CurrenteDate",
+                      "op": {
+                        "value": "CurrenteDateSimuled",
+                        "type": "entityKnowledge"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
                     "id": "9809a9e9-d127-4b29-acb9-cbfdbd751ccb",
                     "activated": true,
                     "type": "action",
@@ -97,38 +114,16 @@
                     },
                     "properties": {
                       "op1": {
-                        "value": "EventFindActivity",
+                        "value": "DateReunion",
                         "type": "entityKnowledge"
                       },
                       "op2": {
-                        "value": "true",
+                        "value": "CurrenteDate",
                         "type": "boolean"
                       },
-                      "op": "=="
+                      "op": "<"
                     },
-                    "children": [
-                      {
-                        "id": "26768819-e86d-4b76-8250-e75c1f8448d1",
-                        "activated": true,
-                        "type": "condition",
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
-                        },
-                        "properties": {
-                          "op1": {
-                            "value": "DateReunion",
-                            "type": "entityKnowledge"
-                          },
-                          "op2": {
-                            "value": "DateTraitement",
-                            "type": "entityKnowledge"
-                          },
-                          "op": "<"
-                        },
-                        "children": []
-                      }
-                    ]
+                    "children": []
                   }
                 ]
               }
