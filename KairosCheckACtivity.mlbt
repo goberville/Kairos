@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "4e5a0aad-4d86-4092-931f-f18e8fdec776",
+    "uuid": "f9f8313d-4521-4fef-84d7-5c1d80dee29e",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -287,7 +287,18 @@
                       "type": "entityKnowledge"
                     }
                   ],
-                  "outputParams": []
+                  "outputParams": [
+                    {
+                      "key": "EventID",
+                      "value": "EventID",
+                      "type": "entityKnowledge"
+                    },
+                    {
+                      "key": "DateReunion",
+                      "value": "DateReunion",
+                      "type": "entityKnowledge"
+                    }
+                  ]
                 },
                 "children": []
               }
