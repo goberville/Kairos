@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "a4106b30-eaad-4517-84a0-098094c23329",
+    "uuid": "052a6716-d048-4305-b87f-5772c9eef5ae",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -122,25 +122,36 @@
                     "children": []
                   },
                   {
-                    "id": "92df36d5-1b95-4c06-b2fa-28e663b5aae9",
+                    "id": "370cf618-ff7b-477f-927b-66a0e85c4a61",
                     "activated": true,
-                    "type": "condition",
+                    "type": "sequence",
                     "metadata": {
                       "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
+                      "itemTemplate": "BTSequenceNode.qml"
                     },
-                    "properties": {
-                      "op1": {
-                        "value": "EventFind",
-                        "type": "entityKnowledge"
-                      },
-                      "op2": {
-                        "value": "false",
-                        "type": "boolean"
-                      },
-                      "op": "=="
-                    },
+                    "properties": {},
                     "children": [
+                      {
+                        "id": "92df36d5-1b95-4c06-b2fa-28e663b5aae9",
+                        "activated": true,
+                        "type": "condition",
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTConditionNode.qml"
+                        },
+                        "properties": {
+                          "op1": {
+                            "value": "EventFind",
+                            "type": "entityKnowledge"
+                          },
+                          "op2": {
+                            "value": "false",
+                            "type": "boolean"
+                          },
+                          "op": "=="
+                        },
+                        "children": []
+                      },
                       {
                         "id": "b535e89f-63d5-4556-82bc-24f9949125b6",
                         "activated": true,
