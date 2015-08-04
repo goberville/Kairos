@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "b78586ba-6155-4430-aecf-f66508f6459e",
+    "uuid": "e41809d0-c3ec-4f62-ba4b-18b46565657f",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -150,28 +150,7 @@
                             "value": "DateEmpty",
                             "type": "entityKnowledge"
                           },
-                          "op": "!="
-                        },
-                        "children": []
-                      },
-                      {
-                        "id": "40acb0de-0a4b-4000-9829-6c09fe554a2a",
-                        "activated": true,
-                        "type": "condition",
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
-                        },
-                        "properties": {
-                          "op1": {
-                            "value": "DateReunion",
-                            "type": "entityKnowledge"
-                          },
-                          "op2": {
-                            "value": "CurrenteDate",
-                            "type": "entityKnowledge"
-                          },
-                          "op": ">="
+                          "op": "=="
                         },
                         "children": []
                       },
