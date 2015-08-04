@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "90eb3ba9-ac60-4791-9b67-860d56357405",
+    "uuid": "26bdc3f7-6e41-4309-8035-24f09fe314d5",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -143,14 +143,14 @@
                         },
                         "properties": {
                           "op1": {
-                            "value": "true",
-                            "type": "boolean"
+                            "value": "DateReunion",
+                            "type": "entityKnowledge"
                           },
                           "op2": {
-                            "value": "false",
-                            "type": "boolean"
+                            "value": "CurrenteDateSimuled",
+                            "type": "entityKnowledge"
                           },
-                          "op": "=="
+                          "op": ">"
                         },
                         "children": []
                       },
