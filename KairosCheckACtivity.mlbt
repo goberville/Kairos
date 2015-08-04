@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "c73ba22d-d8f4-427a-bb19-f1ef6e760912",
+    "uuid": "b676eaf4-ae9e-46e1-a036-9dad151db68f",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -192,7 +192,54 @@
                         "children": []
                       }
                     ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "018620ef-67a8-47a9-8bb8-512436aec46a",
+            "activated": true,
+            "type": "priority",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSelectorPrio.qml"
+            },
+            "properties": {
+              "active": "true"
+            },
+            "children": [
+              {
+                "id": "775228f6-dc85-43ff-b382-fd9d4db0e8df",
+                "activated": true,
+                "type": "condition",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTConditionNode.qml"
+                },
+                "properties": {
+                  "op1": {
+                    "value": "EventFind",
+                    "type": "entityKnowledge"
                   },
+                  "op2": {
+                    "value": "false",
+                    "type": "boolean"
+                  },
+                  "op": "=="
+                },
+                "children": []
+              },
+              {
+                "id": "1d767b80-2820-405d-9c77-add2f06e3f62",
+                "activated": true,
+                "type": "sequence",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
+                },
+                "properties": {},
+                "children": [
                   {
                     "id": "88637faa-d522-4062-b89d-2f5c060707a6",
                     "activated": true,
@@ -229,57 +276,10 @@
                       ]
                     },
                     "children": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "018620ef-67a8-47a9-8bb8-512436aec46a",
-            "activated": false,
-            "type": "priority",
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSelectorPrio.qml"
-            },
-            "properties": {
-              "active": "true"
-            },
-            "children": [
-              {
-                "id": "775228f6-dc85-43ff-b382-fd9d4db0e8df",
-                "activated": false,
-                "type": "condition",
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTConditionNode.qml"
-                },
-                "properties": {
-                  "op1": {
-                    "value": "EventFind",
-                    "type": "entityKnowledge"
                   },
-                  "op2": {
-                    "value": "true",
-                    "type": "boolean"
-                  },
-                  "op": "=="
-                },
-                "children": []
-              },
-              {
-                "id": "1d767b80-2820-405d-9c77-add2f06e3f62",
-                "activated": false,
-                "type": "sequence",
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTSequenceNode.qml"
-                },
-                "properties": {},
-                "children": [
                   {
                     "id": "51874e91-21d4-4978-b246-359ec91f8391",
-                    "activated": false,
+                    "activated": true,
                     "type": "set",
                     "metadata": {
                       "label": "",
