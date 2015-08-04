@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "9e202371-bd00-4618-8692-925aa31186d7",
+    "uuid": "47ee1cd7-0b04-4e78-8223-ab5911f32527",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -203,7 +203,7 @@
                       "itemTemplate": "BTSelectorPrio.qml"
                     },
                     "properties": {
-                      "active": "true"
+                      "active": "false"
                     },
                     "children": [
                       {
@@ -299,41 +299,70 @@
                 "children": []
               },
               {
-                "id": "88637faa-d522-4062-b89d-2f5c060707a6",
+                "id": "1d767b80-2820-405d-9c77-add2f06e3f62",
                 "activated": true,
-                "type": "action",
+                "type": "sequence",
                 "metadata": {
                   "label": "",
-                  "itemTemplate": "BTActionNode.qml"
+                  "itemTemplate": "BTSequenceNode.qml"
                 },
-                "properties": {
-                  "name": "TraitementEvent",
-                  "inputParams": [
-                    {
-                      "key": "EventID",
-                      "value": "EventID",
-                      "type": "entityKnowledge"
+                "properties": {},
+                "children": [
+                  {
+                    "id": "88637faa-d522-4062-b89d-2f5c060707a6",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTActionNode.qml"
                     },
-                    {
-                      "key": "DateReunion",
-                      "value": "DateReunion",
-                      "type": "entityKnowledge"
-                    }
-                  ],
-                  "outputParams": [
-                    {
-                      "key": "EventID",
-                      "value": "EventID",
-                      "type": "entityKnowledge"
+                    "properties": {
+                      "name": "TraitementEvent",
+                      "inputParams": [
+                        {
+                          "key": "EventID",
+                          "value": "EventID",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateReunion",
+                          "value": "DateReunion",
+                          "type": "entityKnowledge"
+                        }
+                      ],
+                      "outputParams": [
+                        {
+                          "key": "EventID",
+                          "value": "EventID",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateReunion",
+                          "value": "DateReunion",
+                          "type": "entityKnowledge"
+                        }
+                      ]
                     },
-                    {
-                      "key": "DateReunion",
-                      "value": "DateReunion",
-                      "type": "entityKnowledge"
-                    }
-                  ]
-                },
-                "children": []
+                    "children": []
+                  },
+                  {
+                    "id": "51874e91-21d4-4978-b246-359ec91f8391",
+                    "activated": true,
+                    "type": "set",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSetNode.qml"
+                    },
+                    "properties": {
+                      "destination": "EventFind",
+                      "op": {
+                        "value": "false",
+                        "type": "boolean"
+                      }
+                    },
+                    "children": []
+                  }
+                ]
               }
             ]
           }
