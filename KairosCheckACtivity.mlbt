@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "d3e40b1d-68d9-49d8-9007-472d1496f332",
+    "uuid": "418016cc-6854-4de1-9e5e-7d4fdad83624",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -199,7 +199,7 @@
           },
           {
             "id": "018620ef-67a8-47a9-8bb8-512436aec46a",
-            "activated": true,
+            "activated": false,
             "type": "priority",
             "metadata": {
               "label": "",
@@ -211,7 +211,7 @@
             "children": [
               {
                 "id": "775228f6-dc85-43ff-b382-fd9d4db0e8df",
-                "activated": true,
+                "activated": false,
                 "type": "condition",
                 "metadata": {
                   "label": "",
@@ -223,7 +223,7 @@
                     "type": "entityKnowledge"
                   },
                   "op2": {
-                    "value": "false",
+                    "value": "true",
                     "type": "boolean"
                   },
                   "op": "=="
@@ -232,7 +232,7 @@
               },
               {
                 "id": "1d767b80-2820-405d-9c77-add2f06e3f62",
-                "activated": true,
+                "activated": false,
                 "type": "sequence",
                 "metadata": {
                   "label": "",
@@ -242,7 +242,7 @@
                 "children": [
                   {
                     "id": "88637faa-d522-4062-b89d-2f5c060707a6",
-                    "activated": true,
+                    "activated": false,
                     "type": "action",
                     "metadata": {
                       "label": "",
@@ -279,7 +279,7 @@
                   },
                   {
                     "id": "51874e91-21d4-4978-b246-359ec91f8391",
-                    "activated": true,
+                    "activated": false,
                     "type": "set",
                     "metadata": {
                       "label": "",
