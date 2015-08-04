@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "556f8e6e-415a-4c82-98c3-07499093821d",
+    "uuid": "54f59f7f-b9bb-407b-86b9-09ce448b0591",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -59,7 +59,7 @@
                       "itemTemplate": "BTSelectorPrio.qml"
                     },
                     "properties": {
-                      "active": "false"
+                      "active": "true"
                     },
                     "children": [
                       {
@@ -239,23 +239,19 @@
                         ]
                       },
                       {
-                        "id": "206a714b-f6e3-4307-b30f-b47f8bb13dc5",
+                        "id": "022b4cef-c09b-4253-b7dc-d47c5cc94522",
                         "activated": true,
-                        "type": "action",
+                        "type": "set",
                         "metadata": {
                           "label": "",
-                          "itemTemplate": "BTActionNode.qml"
+                          "itemTemplate": "BTSetNode.qml"
                         },
                         "properties": {
-                          "name": "Wait",
-                          "inputParams": [
-                            {
-                              "key": "Sleep",
-                              "value": "5",
-                              "type": "integer"
-                            }
-                          ],
-                          "outputParams": []
+                          "destination": "EventFind",
+                          "op": {
+                            "value": "true",
+                            "type": "boolean"
+                          }
                         },
                         "children": []
                       }
