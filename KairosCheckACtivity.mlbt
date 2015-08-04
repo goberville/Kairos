@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "a7d8bed3-57af-4b55-807f-923c9f0691c9",
+    "uuid": "e8bfd44b-5f53-4e7b-9523-ac591c81bfe4",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -51,67 +51,7 @@
                 "properties": {},
                 "children": [
                   {
-                    "id": "f68660e3-d759-4221-8f34-d66506c959f3",
-                    "activated": true,
-                    "type": "set",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTSetNode.qml"
-                    },
-                    "properties": {
-                      "destination": "EventFind",
-                      "op": {
-                        "value": "false",
-                        "type": "boolean"
-                      }
-                    },
-                    "children": []
-                  },
-                  {
-                    "id": "4c160208-fba0-4f3a-a373-47b818e431ea",
-                    "activated": true,
-                    "type": "set",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTSetNode.qml"
-                    },
-                    "properties": {
-                      "destination": "CurrenteDate",
-                      "op": {
-                        "value": "CurrenteDateSimuled",
-                        "type": "entityKnowledge"
-                      }
-                    },
-                    "children": []
-                  },
-                  {
-                    "id": "9809a9e9-d127-4b29-acb9-cbfdbd751ccb",
-                    "activated": true,
-                    "type": "action",
-                    "metadata": {
-                      "label": "GestionEvent",
-                      "itemTemplate": "BTActionNode.qml"
-                    },
-                    "properties": {
-                      "name": "GestionEvent",
-                      "inputParams": [
-                        {
-                          "key": "EventID",
-                          "value": "EventID",
-                          "type": "entityKnowledge"
-                        },
-                        {
-                          "key": "DateReunion",
-                          "value": "DateReunion",
-                          "type": "entityKnowledge"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": []
-                  },
-                  {
-                    "id": "eba7a580-1d96-4fb4-bde4-19bf64e24129",
+                    "id": "14ae07ce-9996-4082-a055-dfe20702b9b0",
                     "activated": true,
                     "type": "priority",
                     "metadata": {
@@ -119,49 +59,133 @@
                       "itemTemplate": "BTSelectorPrio.qml"
                     },
                     "properties": {
-                      "active": "true"
+                      "active": "false"
                     },
                     "children": [
                       {
-                        "id": "72a9cbec-81b3-4cc7-be33-5ff820ccf8ee",
+                        "id": "f68660e3-d759-4221-8f34-d66506c959f3",
                         "activated": true,
-                        "type": "condition",
+                        "type": "set",
                         "metadata": {
                           "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
+                          "itemTemplate": "BTSetNode.qml"
                         },
                         "properties": {
-                          "op1": {
-                            "value": "DateReunion",
-                            "type": "entityKnowledge"
-                          },
-                          "op2": {
-                            "value": "DateEmpty",
-                            "type": "entityKnowledge"
-                          },
-                          "op": "!="
+                          "destination": "EventFind",
+                          "op": {
+                            "value": "false",
+                            "type": "boolean"
+                          }
                         },
+                        "children": []
+                      },
+                      {
+                        "id": "4c160208-fba0-4f3a-a373-47b818e431ea",
+                        "activated": true,
+                        "type": "set",
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTSetNode.qml"
+                        },
+                        "properties": {
+                          "destination": "CurrenteDate",
+                          "op": {
+                            "value": "CurrenteDateSimuled",
+                            "type": "entityKnowledge"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "id": "9809a9e9-d127-4b29-acb9-cbfdbd751ccb",
+                        "activated": true,
+                        "type": "action",
+                        "metadata": {
+                          "label": "GestionEvent",
+                          "itemTemplate": "BTActionNode.qml"
+                        },
+                        "properties": {
+                          "name": "GestionEvent",
+                          "inputParams": [
+                            {
+                              "key": "EventID",
+                              "value": "EventID",
+                              "type": "entityKnowledge"
+                            },
+                            {
+                              "key": "DateReunion",
+                              "value": "DateReunion",
+                              "type": "entityKnowledge"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": []
+                      },
+                      {
+                        "id": "06d25371-97d4-436f-a6c1-29cadf33aede",
+                        "activated": true,
+                        "type": "sequence",
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTSequenceNode.qml"
+                        },
+                        "properties": {},
                         "children": [
                           {
-                            "id": "40acb0de-0a4b-4000-9829-6c09fe554a2a",
+                            "id": "532235ab-101b-4647-91e6-bb4c4d21c82f",
                             "activated": true,
-                            "type": "condition",
+                            "type": "priority",
                             "metadata": {
                               "label": "",
-                              "itemTemplate": "BTConditionNode.qml"
+                              "itemTemplate": "BTSelectorPrio.qml"
                             },
                             "properties": {
-                              "op1": {
-                                "value": "DateReunion",
-                                "type": "entityKnowledge"
-                              },
-                              "op2": {
-                                "value": "CurrenteDate",
-                                "type": "entityKnowledge"
-                              },
-                              "op": ">="
+                              "active": "true"
                             },
                             "children": [
+                              {
+                                "id": "72a9cbec-81b3-4cc7-be33-5ff820ccf8ee",
+                                "activated": true,
+                                "type": "condition",
+                                "metadata": {
+                                  "label": "",
+                                  "itemTemplate": "BTConditionNode.qml"
+                                },
+                                "properties": {
+                                  "op1": {
+                                    "value": "DateReunion",
+                                    "type": "entityKnowledge"
+                                  },
+                                  "op2": {
+                                    "value": "DateEmpty",
+                                    "type": "entityKnowledge"
+                                  },
+                                  "op": "!="
+                                },
+                                "children": []
+                              },
+                              {
+                                "id": "40acb0de-0a4b-4000-9829-6c09fe554a2a",
+                                "activated": true,
+                                "type": "condition",
+                                "metadata": {
+                                  "label": "",
+                                  "itemTemplate": "BTConditionNode.qml"
+                                },
+                                "properties": {
+                                  "op1": {
+                                    "value": "DateReunion",
+                                    "type": "entityKnowledge"
+                                  },
+                                  "op2": {
+                                    "value": "CurrenteDate",
+                                    "type": "entityKnowledge"
+                                  },
+                                  "op": ">="
+                                },
+                                "children": []
+                              },
                               {
                                 "id": "e1c86130-bd33-47c0-9a60-9d57d04d720f",
                                 "activated": true,
@@ -182,6 +206,41 @@
                             ]
                           }
                         ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "eba7a580-1d96-4fb4-bde4-19bf64e24129",
+                    "activated": true,
+                    "type": "priority",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSelectorPrio.qml"
+                    },
+                    "properties": {
+                      "active": "false"
+                    },
+                    "children": [
+                      {
+                        "id": "4c2cb345-e944-4e82-827a-08b99ca72f9e",
+                        "activated": true,
+                        "type": "condition",
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTConditionNode.qml"
+                        },
+                        "properties": {
+                          "op1": {
+                            "value": "EventFind",
+                            "type": "entityKnowledge"
+                          },
+                          "op2": {
+                            "value": "false",
+                            "type": "boolean"
+                          },
+                          "op": "=="
+                        },
+                        "children": []
                       },
                       {
                         "id": "b535e89f-63d5-4556-82bc-24f9949125b6",
@@ -230,7 +289,7 @@
               "itemTemplate": "BTSelectorPrio.qml"
             },
             "properties": {
-              "active": "false"
+              "active": "true"
             },
             "children": [
               {
