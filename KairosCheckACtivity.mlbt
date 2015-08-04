@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "418016cc-6854-4de1-9e5e-7d4fdad83624",
+    "uuid": "17304c19-19b2-4bcd-a728-1db713c3f12f",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -130,7 +130,7 @@
                       "itemTemplate": "BTSelectorPrio.qml"
                     },
                     "properties": {
-                      "active": "true"
+                      "active": "false"
                     },
                     "children": [
                       {
