@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "54f59f7f-b9bb-407b-86b9-09ce448b0591",
+    "uuid": "32c44a7c-7b4a-443c-a42c-1bd4ce689385",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -256,27 +256,6 @@
                         "children": []
                       }
                     ]
-                  },
-                  {
-                    "id": "c1664d06-284c-44dd-bba6-b39601a9f7a5",
-                    "activated": true,
-                    "type": "action",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTActionNode.qml"
-                    },
-                    "properties": {
-                      "name": "Wait",
-                      "inputParams": [
-                        {
-                          "key": "Sleep",
-                          "value": "10",
-                          "type": "integer"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": []
                   }
                 ]
               }
