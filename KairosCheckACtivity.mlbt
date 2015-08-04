@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "3048e621-a058-4031-84dd-f87559893e05",
+    "uuid": "16d5f9dc-338e-4014-991e-4d4cbfbd05f7",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -231,23 +231,6 @@
                                       "type": "entityKnowledge"
                                     }
                                   ]
-                                },
-                                "children": []
-                              },
-                              {
-                                "id": "e6786d97-0218-4b5b-9970-e0a65bd992a9",
-                                "activated": true,
-                                "type": "set",
-                                "metadata": {
-                                  "label": "",
-                                  "itemTemplate": "BTSetNode.qml"
-                                },
-                                "properties": {
-                                  "destination": "EventFind",
-                                  "op": {
-                                    "value": "false",
-                                    "type": "boolean"
-                                  }
                                 },
                                 "children": []
                               }
