@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "052a6716-d048-4305-b87f-5772c9eef5ae",
+    "uuid": "740cd5cb-3913-4d81-8c23-13f4d88be9d3",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -122,6 +122,43 @@
                     "children": []
                   },
                   {
+                    "id": "b535e89f-63d5-4556-82bc-24f9949125b6",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "UpDateEvent",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "TraitementEvent",
+                      "inputParams": [
+                        {
+                          "key": "EventID",
+                          "value": "EnventID",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateReunion",
+                          "value": "DateReunion",
+                          "type": "entityKnowledge"
+                        }
+                      ],
+                      "outputParams": [
+                        {
+                          "key": "EventID",
+                          "value": "EnventID",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateReunion",
+                          "value": "DateReunion",
+                          "type": "entityKnowledge"
+                        }
+                      ]
+                    },
+                    "children": []
+                  },
+                  {
                     "id": "370cf618-ff7b-477f-927b-66a0e85c4a61",
                     "activated": true,
                     "type": "sequence",
@@ -149,43 +186,6 @@
                             "type": "boolean"
                           },
                           "op": "=="
-                        },
-                        "children": []
-                      },
-                      {
-                        "id": "b535e89f-63d5-4556-82bc-24f9949125b6",
-                        "activated": true,
-                        "type": "action",
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTActionNode.qml"
-                        },
-                        "properties": {
-                          "name": "TraitementEvent",
-                          "inputParams": [
-                            {
-                              "key": "EventID",
-                              "value": "EnventID",
-                              "type": "entityKnowledge"
-                            },
-                            {
-                              "key": "DateReunion",
-                              "value": "DateReunion",
-                              "type": "entityKnowledge"
-                            }
-                          ],
-                          "outputParams": [
-                            {
-                              "key": "EventID",
-                              "value": "EnventID",
-                              "type": "entityKnowledge"
-                            },
-                            {
-                              "key": "DateReunion",
-                              "value": "DateReunion",
-                              "type": "entityKnowledge"
-                            }
-                          ]
                         },
                         "children": []
                       }
