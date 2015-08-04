@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "4077d0ec-5b0d-4bf5-aeef-c1c3c3fee7de",
+    "uuid": "57db3c00-e84d-4f74-90ed-a87e2c0569d0",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -147,8 +147,8 @@
                             "type": "entityKnowledge"
                           },
                           "op2": {
-                            "value": "DateEmpty",
-                            "type": "entityKnowledge"
+                            "value": "",
+                            "type": "string"
                           },
                           "op": "=="
                         },
@@ -204,41 +204,6 @@
                               "type": "entityKnowledge"
                             }
                           ]
-                        },
-                        "children": []
-                      }
-                    ]
-                  },
-                  {
-                    "id": "eba7a580-1d96-4fb4-bde4-19bf64e24129",
-                    "activated": true,
-                    "type": "priority",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTSelectorPrio.qml"
-                    },
-                    "properties": {
-                      "active": "false"
-                    },
-                    "children": [
-                      {
-                        "id": "4c2cb345-e944-4e82-827a-08b99ca72f9e",
-                        "activated": true,
-                        "type": "condition",
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
-                        },
-                        "properties": {
-                          "op1": {
-                            "value": "EventFind",
-                            "type": "entityKnowledge"
-                          },
-                          "op2": {
-                            "value": "false",
-                            "type": "boolean"
-                          },
-                          "op": "=="
                         },
                         "children": []
                       }
