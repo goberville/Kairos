@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "0226cfb2-6367-4e0d-8386-8d7da698d053",
+    "uuid": "a4106b30-eaad-4517-84a0-098094c23329",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -150,7 +150,7 @@
                           "itemTemplate": "BTActionNode.qml"
                         },
                         "properties": {
-                          "name": "UpDateEvent",
+                          "name": "TraitementEvent",
                           "inputParams": [
                             {
                               "key": "EventID",
