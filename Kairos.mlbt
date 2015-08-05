@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "4cf2fb1b-7ee7-4c66-8cac-012cdd36b07d",
+    "uuid": "c7784541-9eb3-459c-bf90-d8dea99cbb3b",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -95,7 +95,7 @@
                     },
                     "properties": {
                       "behavior": {
-                        "value": "",
+                        "value": "KairosTraitement",
                         "type": "uriPath"
                       },
                       "inputParams": []
