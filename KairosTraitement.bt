@@ -1,10 +1,61 @@
 [
   {
-    "version": "0.1.2"
+    "version": "1.0.0"
   },
   {
-    "id": "181677a5-7165-400f-98c3-b0883ab06355",
-    "name": "dcfc002f-d0b4-43dd-a7e1-09f5289fe33a",
-    "children": []
+    "uuid": "37030228-7736-40c5-bc63-3fe7619e964a",
+    "name": "KairosTraitement",
+    "description": "",
+    "children": [
+      {
+        "id": "0c2f0c00-1c28-40c8-89cc-0a564504c449",
+        "activated": true,
+        "type": "sequence",
+        "metadata": {
+          "label": "",
+          "itemTemplate": "BTSequenceNode.qml"
+        },
+        "properties": {},
+        "children": [
+          {
+            "id": "fa7ab231-ff43-445b-b91d-06fd878b3d27",
+            "activated": true,
+            "type": "action",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTActionNode.qml"
+            },
+            "properties": {
+              "name": "TraitementEvent",
+              "inputParams": [
+                {
+                  "key": "EventID",
+                  "value": "EventID",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "DateReunion",
+                  "value": "DateReunion",
+                  "type": "entityKnowledge"
+                }
+              ],
+              "outputParams": [
+                {
+                  "key": "EventID",
+                  "value": "EventID",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "DateReunion",
+                  "value": "DateReunion",
+                  "type": "entityKnowledge"
+                }
+              ]
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
   }
 ]
