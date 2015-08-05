@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "32c44a7c-7b4a-443c-a42c-1bd4ce689385",
+    "uuid": "b2b040aa-f4d2-4cf6-aed8-1cefd7a05a5a",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -193,7 +193,7 @@
                                     "value": "CurrenteDate",
                                     "type": "entityKnowledge"
                                   },
-                                  "op": ">"
+                                  "op": "<="
                                 },
                                 "children": []
                               },
