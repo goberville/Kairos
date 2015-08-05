@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "4fe5992b-0210-458d-8403-3c380effbd72",
+    "uuid": "23ed1246-7db6-4d21-9b1b-82421f3164af",
     "name": "KairosCheckACtivity",
     "description": "",
     "children": [
@@ -92,6 +92,27 @@
                 "children": []
               },
               {
+                "id": "796a0e1c-357a-477d-8fc0-0199aca12e33",
+                "activated": true,
+                "type": "condition",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTConditionNode.qml"
+                },
+                "properties": {
+                  "op1": {
+                    "value": "DateReunion",
+                    "type": "entityKnowledge"
+                  },
+                  "op2": {
+                    "value": "",
+                    "type": "string"
+                  },
+                  "op": "!="
+                },
+                "children": []
+              },
+              {
                 "id": "0e2f6393-1470-46c0-9614-cd897df0e14e",
                 "activated": true,
                 "type": "priority",
@@ -103,27 +124,6 @@
                   "active": "false"
                 },
                 "children": [
-                  {
-                    "id": "796a0e1c-357a-477d-8fc0-0199aca12e33",
-                    "activated": true,
-                    "type": "condition",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
-                    },
-                    "properties": {
-                      "op1": {
-                        "value": "DateReunion",
-                        "type": "entityKnowledge"
-                      },
-                      "op2": {
-                        "value": "",
-                        "type": "string"
-                      },
-                      "op": "=="
-                    },
-                    "children": []
-                  },
                   {
                     "id": "29ce6b55-6e2a-4dd8-a603-ec59d96d0b86",
                     "activated": true,
@@ -141,7 +141,7 @@
                         "value": "CurrenteDate",
                         "type": "entityKnowledge"
                       },
-                      "op": "<"
+                      "op": ">"
                     },
                     "children": []
                   },
