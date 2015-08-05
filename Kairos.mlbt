@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "8b4c9505-e1ad-46ca-b7c3-361e106dbc94",
+    "uuid": "4cf2fb1b-7ee7-4c66-8cac-012cdd36b07d",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -59,21 +59,50 @@
             },
             "children": [
               {
-                "id": "027f14f5-067f-4854-94b2-f9437a5fb8bf",
+                "id": "9ab709ce-9fdd-4498-99ad-312d71197dcd",
                 "activated": true,
-                "type": "embedded",
+                "type": "sequence",
                 "metadata": {
                   "label": "",
-                  "itemTemplate": "BTEmbeddedNode.qml"
+                  "itemTemplate": "BTSequenceNode.qml"
                 },
-                "properties": {
-                  "behavior": {
-                    "value": "KairosCheckACtivity",
-                    "type": "uriPath"
+                "properties": {},
+                "children": [
+                  {
+                    "id": "027f14f5-067f-4854-94b2-f9437a5fb8bf",
+                    "activated": true,
+                    "type": "embedded",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTEmbeddedNode.qml"
+                    },
+                    "properties": {
+                      "behavior": {
+                        "value": "KairosCheckACtivity",
+                        "type": "uriPath"
+                      },
+                      "inputParams": []
+                    },
+                    "children": []
                   },
-                  "inputParams": []
-                },
-                "children": []
+                  {
+                    "id": "a55e88c3-cfeb-4c67-943c-f33d984c142c",
+                    "activated": true,
+                    "type": "embedded",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTEmbeddedNode.qml"
+                    },
+                    "properties": {
+                      "behavior": {
+                        "value": "",
+                        "type": "uriPath"
+                      },
+                      "inputParams": []
+                    },
+                    "children": []
+                  }
+                ]
               }
             ]
           }
