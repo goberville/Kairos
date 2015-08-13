@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "37030228-7736-40c5-bc63-3fe7619e964a",
+    "uuid": "05e2d869-7fca-4266-a84f-42148e153cc8",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -17,6 +17,27 @@
         },
         "properties": {},
         "children": [
+          {
+            "id": "b289ede8-3246-4ef3-a0b2-a267d1d5ce0b",
+            "activated": true,
+            "type": "condition",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTConditionNode.qml"
+            },
+            "properties": {
+              "op1": {
+                "value": "DateReunion",
+                "type": "entityKnowledge"
+              },
+              "op2": {
+                "value": "Current",
+                "type": "entityKnowledge"
+              },
+              "op": "<="
+            },
+            "children": []
+          },
           {
             "id": "fa7ab231-ff43-445b-b91d-06fd878b3d27",
             "activated": true,
