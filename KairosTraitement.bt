@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "88361911-7a03-464c-af36-b9c3cbb840ac",
+    "uuid": "f29bc345-c2ea-4ff4-88c0-c0dd193c95e4",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -29,16 +29,19 @@
               "name": "Sum",
               "inputParams": [
                 {
+                  "key": "DateReunion",
                   "value": "DateReunion",
                   "type": "entityKnowledge"
                 },
                 {
+                  "key": "NbreMinuteAlerte",
                   "value": "-1800",
                   "type": "real"
                 }
               ],
               "outputParams": [
                 {
+                  "key": "DateAlerte",
                   "value": "DateAlerte",
                   "type": "entityKnowledge"
                 }
