@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "45efb230-6c3e-489e-b872-f451e22962ef",
+    "uuid": "3bbfaee0-f0c8-4365-a633-f5de2b68a0f9",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -59,14 +59,14 @@
             },
             "properties": {
               "op1": {
-                "value": "DateAlerte",
-                "type": "entityKnowledge"
-              },
-              "op2": {
                 "value": "CurrenteDate",
                 "type": "entityKnowledge"
               },
-              "op": "=="
+              "op2": {
+                "value": "DateAlerte",
+                "type": "entityKnowledge"
+              },
+              "op": ">="
             },
             "children": []
           },
