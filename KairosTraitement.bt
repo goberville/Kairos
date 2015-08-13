@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "da732176-9281-4758-a4de-b3d956018691",
+    "uuid": "88361911-7a03-464c-af36-b9c3cbb840ac",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -17,6 +17,35 @@
         },
         "properties": {},
         "children": [
+          {
+            "id": "abf8f27e-ef41-4c33-b581-aa26872a7b92",
+            "activated": true,
+            "type": "action",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTActionNode.qml"
+            },
+            "properties": {
+              "name": "Sum",
+              "inputParams": [
+                {
+                  "value": "DateReunion",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "value": "-1800",
+                  "type": "real"
+                }
+              ],
+              "outputParams": [
+                {
+                  "value": "DateAlerte",
+                  "type": "entityKnowledge"
+                }
+              ]
+            },
+            "children": []
+          },
           {
             "id": "b289ede8-3246-4ef3-a0b2-a267d1d5ce0b",
             "activated": true,
