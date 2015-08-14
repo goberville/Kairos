@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "9bae4595-83ae-4539-a760-5f6283879996",
+    "uuid": "89054239-63a3-487b-b594-067da714f823",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -18,54 +18,56 @@
         "properties": {},
         "children": [
           {
-            "id": "8fdf1b3d-ec96-4d40-a33f-0d17d4b1f75b",
+            "id": "e703aa0f-44f7-46bb-9ec5-249a68e46c06",
             "activated": true,
-            "type": "sequence",
+            "type": "action",
             "metadata": {
-              "label": "",
-              "itemTemplate": "BTSequenceNode.qml"
+              "label": "Meteo Depart",
+              "itemTemplate": "BTActionNode.qml"
             },
-            "properties": {},
-            "children": [
-              {
-                "id": "4b9d756b-79d4-465e-a17e-771b403f2cef",
-                "activated": true,
-                "type": "condition",
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTConditionNode.qml"
+            "properties": {
+              "name": "",
+              "inputParams": [
+                {
+                  "key": "EventID",
+                  "value": "EventID",
+                  "type": "entityKnowledge"
                 },
-                "properties": {
-                  "op1": {
-                    "value": "DistanceTrajetAuto",
-                    "type": "entityKnowledge"
-                  },
-                  "op2": {
-                    "value": "true",
-                    "type": "boolean"
-                  },
-                  "op": "!="
+                {
+                  "key": "type",
+                  "value": "source",
+                  "type": "string"
+                }
+              ],
+              "outputParams": []
+            },
+            "children": []
+          },
+          {
+            "id": "5c7037b5-7388-4edd-823a-88459ab11699",
+            "activated": true,
+            "type": "action",
+            "metadata": {
+              "label": "Meteo Arrivée",
+              "itemTemplate": "BTActionNode.qml"
+            },
+            "properties": {
+              "name": "",
+              "inputParams": [
+                {
+                  "key": "EventID",
+                  "value": "",
+                  "type": "entityKnowledge"
                 },
-                "children": []
-              },
-              {
-                "id": "f5a5e4e8-e3ca-4606-b903-27ad7b611a0a",
-                "activated": true,
-                "type": "set",
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTSetNode.qml"
-                },
-                "properties": {
-                  "destination": "DistanceTrajet",
-                  "op": {
-                    "value": "DistanceTrajetAuto",
-                    "type": "entityKnowledge"
-                  }
-                },
-                "children": []
-              }
-            ]
+                {
+                  "key": "Type",
+                  "value": "destination",
+                  "type": "string"
+                }
+              ],
+              "outputParams": []
+            },
+            "children": []
           },
           {
             "id": "032cfda4-6efa-40c4-ba12-34397ecffad0",
@@ -76,7 +78,7 @@
               "itemTemplate": "BTSetNode.qml"
             },
             "properties": {
-              "destination": "",
+              "destination": "DistanceTrajet",
               "op": {
                 "value": "",
                 "type": "string"
@@ -85,17 +87,19 @@
             "children": []
           },
           {
-            "id": "e703aa0f-44f7-46bb-9ec5-249a68e46c06",
+            "id": "0335c0b5-1d0f-4975-81cb-639f52483684",
             "activated": true,
-            "type": "action",
+            "type": "set",
             "metadata": {
               "label": "",
-              "itemTemplate": "BTActionNode.qml"
+              "itemTemplate": "BTSetNode.qml"
             },
             "properties": {
-              "name": "",
-              "inputParams": [],
-              "outputParams": []
+              "destination": "TempsTrajet",
+              "op": {
+                "value": "",
+                "type": "string"
+              }
             },
             "children": []
           }
