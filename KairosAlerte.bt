@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "2f904060-f5a2-4e4b-bb60-2010c6ec3f32",
+    "uuid": "2a9c501f-fc81-4d12-a114-5b4eea653020",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -29,12 +29,14 @@
               "name": "Sum",
               "inputParams": [
                 {
-                  "value": "",
-                  "type": "string"
+                  "key": "DateReunion",
+                  "value": "DateReunion",
+                  "type": "entityKnowledge"
                 },
                 {
-                  "value": "",
-                  "type": "string"
+                  "key": "NbreMinuteAlerte",
+                  "value": "-1800",
+                  "type": "real"
                 }
               ],
               "outputParams": [
