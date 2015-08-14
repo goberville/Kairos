@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "2a9c501f-fc81-4d12-a114-5b4eea653020",
+    "uuid": "f47b72cf-b2a0-4c40-bde9-f96153c55309",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -59,14 +59,14 @@
             },
             "properties": {
               "op1": {
-                "value": "true",
-                "type": "boolean"
+                "value": "CurrenteDate",
+                "type": "entityKnowledge"
               },
               "op2": {
-                "value": "true",
-                "type": "boolean"
+                "value": "DateAlerte",
+                "type": "entityKnowledge"
               },
-              "op": "=="
+              "op": ">="
             },
             "children": []
           },
@@ -75,12 +75,18 @@
             "activated": true,
             "type": "action",
             "metadata": {
-              "label": "",
+              "label": "Send Msg Alerte",
               "itemTemplate": "BTActionNode.qml"
             },
             "properties": {
-              "name": "",
-              "inputParams": [],
+              "name": "Alerte",
+              "inputParams": [
+                {
+                  "key": "EventID",
+                  "value": "EventID",
+                  "type": "entityKnowledge"
+                }
+              ],
               "outputParams": []
             },
             "children": []
