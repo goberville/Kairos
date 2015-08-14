@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "b7aada1c-7c78-47e1-a61c-07d580a1d784",
+    "uuid": "615cacbd-31d1-4a89-b262-4ef6fb2d411d",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -127,8 +127,8 @@
                     "type": "entityKnowledge"
                   },
                   "op2": {
-                    "value": "20",
-                    "type": "integer"
+                    "value": "TrajetMaxVelo",
+                    "type": "entityKnowledge"
                   },
                   "op": "<="
                 },
@@ -213,8 +213,8 @@
                     "type": "entityKnowledge"
                   },
                   "op2": {
-                    "value": "5",
-                    "type": "integer"
+                    "value": "TrajetMaxPied",
+                    "type": "entityKnowledge"
                   },
                   "op": "<"
                 },
