@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "7124bd6e-7ad3-497c-a5e2-496a88285ca0",
+    "uuid": "e1a081c4-b8b3-48cf-abf3-c8ff9eba73de",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -29,8 +29,8 @@
               "name": "Sum",
               "inputParams": [
                 {
-                  "key": "DateReunion",
-                  "value": "DateReunion",
+                  "key": "DateDepart",
+                  "value": "DateDepart",
                   "type": "entityKnowledge"
                 },
                 {
