@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "993c528b-85cc-46fd-84ec-d0aeb4ee7643",
+    "uuid": "010a2439-4396-40eb-85b6-9c94192edab6",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -18,166 +18,46 @@
         "properties": {},
         "children": [
           {
-            "id": "8a029d4b-1a24-4397-95de-f0fa080488df",
+            "id": "6a614400-6a12-49d0-a4fc-4d6135f0d8e0",
             "activated": true,
-            "type": "set",
+            "type": "action",
             "metadata": {
-              "label": "",
-              "itemTemplate": "BTSetNode.qml"
+              "label": "Selectionne Trajet",
+              "itemTemplate": "BTActionNode.qml"
             },
             "properties": {
-              "destination": "DistanceTrajet",
-              "op": {
-                "value": "DistanceTrajetAuto",
-                "type": "entityKnowledge"
-              }
+              "name": "SelectTraject",
+              "inputParams": [
+                {
+                  "key": "EventID",
+                  "value": "EventID",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "PlusCourt",
+                  "value": "TrajectPlusCourt",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "PlusRapide",
+                  "value": "TrajetPlusRapide",
+                  "type": "entityKnowledge"
+                }
+              ],
+              "outputParams": [
+                {
+                  "key": "TempsTrajet",
+                  "value": "TempsTrajet",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "DistanceTrajet",
+                  "value": "DistanceTrajet",
+                  "type": "entityKnowledge"
+                }
+              ]
             },
             "children": []
-          },
-          {
-            "id": "d11a5ef0-2921-4ebb-b41c-bb8dca8b907a",
-            "activated": true,
-            "type": "set",
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSetNode.qml"
-            },
-            "properties": {
-              "destination": "TempsTrajet",
-              "op": {
-                "value": "TempsTrajetAuto",
-                "type": "entityKnowledge"
-              }
-            },
-            "children": []
-          },
-          {
-            "id": "30301885-0839-42bc-9335-21543a155cab",
-            "activated": true,
-            "type": "priority",
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSelectorPrio.qml"
-            },
-            "properties": {
-              "active": "false"
-            },
-            "children": [
-              {
-                "id": "8a03338b-2875-4863-abad-7595cf59901d",
-                "activated": true,
-                "type": "priority",
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTSelectorPrio.qml"
-                },
-                "properties": {
-                  "active": "false"
-                },
-                "children": [
-                  {
-                    "id": "f03e551f-70ef-422c-9332-edc54fc82b76",
-                    "activated": true,
-                    "type": "condition",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
-                    },
-                    "properties": {
-                      "op1": {
-                        "value": "DistanceTrajet",
-                        "type": "entityKnowledge"
-                      },
-                      "op2": {
-                        "value": "DistanceTrajetVelo",
-                        "type": "entityKnowledge"
-                      },
-                      "op": "<"
-                    },
-                    "children": []
-                  },
-                  {
-                    "id": "70b3b6d1-8ab9-4507-9d82-fb050c202c80",
-                    "activated": true,
-                    "type": "set",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTSetNode.qml"
-                    },
-                    "properties": {
-                      "destination": "",
-                      "op": {
-                        "value": "",
-                        "type": "string"
-                      }
-                    },
-                    "children": []
-                  },
-                  {
-                    "id": "477d0e90-2ac5-4525-a421-1907c15d3efa",
-                    "activated": true,
-                    "type": "set",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTSetNode.qml"
-                    },
-                    "properties": {
-                      "destination": "",
-                      "op": {
-                        "value": "",
-                        "type": "string"
-                      }
-                    },
-                    "children": []
-                  },
-                  {
-                    "id": "860b013f-d24d-48ff-96bd-fe80788e7cd1",
-                    "activated": true,
-                    "type": "condition",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
-                    },
-                    "properties": {
-                      "op1": {
-                        "value": "true",
-                        "type": "boolean"
-                      },
-                      "op2": {
-                        "value": "false",
-                        "type": "boolean"
-                      },
-                      "op": "=="
-                    },
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "id": "1a0372ed-40b4-40c8-9c89-bcdd76a719a0",
-                "activated": true,
-                "type": "sequence",
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTSequenceNode.qml"
-                },
-                "properties": {},
-                "children": []
-              },
-              {
-                "id": "54eab563-98e5-467c-b20c-9f3e0e98744d",
-                "activated": true,
-                "type": "priority",
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTSelectorPrio.qml"
-                },
-                "properties": {
-                  "active": "false"
-                },
-                "children": []
-              }
-            ]
           },
           {
             "id": "e703aa0f-44f7-46bb-9ec5-249a68e46c06",
