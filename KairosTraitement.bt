@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "ef926850-fcdc-4107-bdfc-a66abf306fa9",
+    "uuid": "b3bf8baf-a879-4ab7-af60-5a5d8abb5728",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -72,8 +72,13 @@
                   ],
                   "outputParams": [
                     {
+                      "key": "DistanceTrajet",
+                      "value": "DistanceTrajetAuto",
+                      "type": "entityKnowledge"
+                    },
+                    {
                       "key": "TempsTrajet",
-                      "value": "TempsTrajet",
+                      "value": "TempsTrajetAuto",
                       "type": "entityKnowledge"
                     }
                   ]
@@ -123,7 +128,7 @@
                 },
                 "properties": {
                   "op1": {
-                    "value": "DistanceTrajet",
+                    "value": "DistanceTrajetAuto",
                     "type": "entityKnowledge"
                   },
                   "op2": {
@@ -158,8 +163,13 @@
                   ],
                   "outputParams": [
                     {
+                      "key": "DistanceTrajet",
+                      "value": "DistanceTrajetVelo",
+                      "type": "entityKnowledge"
+                    },
+                    {
                       "key": "TempsTrajet",
-                      "value": "TempsTrajet",
+                      "value": "TempsTrajetVelo",
                       "type": "entityKnowledge"
                     }
                   ]
@@ -209,7 +219,7 @@
                 },
                 "properties": {
                   "op1": {
-                    "value": "DistanceTrajet",
+                    "value": "DistanceTrajetAuto",
                     "type": "entityKnowledge"
                   },
                   "op2": {
@@ -244,8 +254,13 @@
                   ],
                   "outputParams": [
                     {
+                      "key": "DistanceTrajet",
+                      "value": "DistanceTrajetPied",
+                      "type": "entityKnowledge"
+                    },
+                    {
                       "key": "TempsTrajet",
-                      "value": "TempsTrajet",
+                      "value": "TempsTrajetPied",
                       "type": "entityKnowledge"
                     }
                   ]
@@ -253,6 +268,17 @@
                 "children": []
               }
             ]
+          },
+          {
+            "id": "94750c98-e280-47bd-8fbe-b736f190e64d",
+            "activated": true,
+            "type": "sequence",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSequenceNode.qml"
+            },
+            "properties": {},
+            "children": []
           }
         ]
       }
