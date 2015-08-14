@@ -1,10 +1,106 @@
 [
   {
-    "version": "0.1.2"
+    "version": "1.0.0"
   },
   {
-    "id": "abb766b0-0b6f-44df-863c-c5a234e2ff97",
-    "name": "0b5d8f0b-5058-4dc8-be18-b244bbf518a4",
-    "children": []
+    "uuid": "9bae4595-83ae-4539-a760-5f6283879996",
+    "name": "KairosSelectTrajet",
+    "description": "",
+    "children": [
+      {
+        "id": "39a049e0-98e6-4a6a-9708-ad4e58fd297d",
+        "activated": true,
+        "type": "sequence",
+        "metadata": {
+          "label": "",
+          "itemTemplate": "BTSequenceNode.qml"
+        },
+        "properties": {},
+        "children": [
+          {
+            "id": "8fdf1b3d-ec96-4d40-a33f-0d17d4b1f75b",
+            "activated": true,
+            "type": "sequence",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSequenceNode.qml"
+            },
+            "properties": {},
+            "children": [
+              {
+                "id": "4b9d756b-79d4-465e-a17e-771b403f2cef",
+                "activated": true,
+                "type": "condition",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTConditionNode.qml"
+                },
+                "properties": {
+                  "op1": {
+                    "value": "DistanceTrajetAuto",
+                    "type": "entityKnowledge"
+                  },
+                  "op2": {
+                    "value": "true",
+                    "type": "boolean"
+                  },
+                  "op": "!="
+                },
+                "children": []
+              },
+              {
+                "id": "f5a5e4e8-e3ca-4606-b903-27ad7b611a0a",
+                "activated": true,
+                "type": "set",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSetNode.qml"
+                },
+                "properties": {
+                  "destination": "DistanceTrajet",
+                  "op": {
+                    "value": "DistanceTrajetAuto",
+                    "type": "entityKnowledge"
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "032cfda4-6efa-40c4-ba12-34397ecffad0",
+            "activated": true,
+            "type": "set",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSetNode.qml"
+            },
+            "properties": {
+              "destination": "",
+              "op": {
+                "value": "",
+                "type": "string"
+              }
+            },
+            "children": []
+          },
+          {
+            "id": "e703aa0f-44f7-46bb-9ec5-249a68e46c06",
+            "activated": true,
+            "type": "action",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTActionNode.qml"
+            },
+            "properties": {
+              "name": "",
+              "inputParams": [],
+              "outputParams": []
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
   }
 ]
