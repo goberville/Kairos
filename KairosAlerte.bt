@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "01c929eb-d5eb-42d7-9376-442ed7100100",
+    "uuid": "2f904060-f5a2-4e4b-bb60-2010c6ec3f32",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -22,13 +22,28 @@
             "activated": true,
             "type": "action",
             "metadata": {
-              "label": "",
+              "label": "Calcul Alerte - 30mn Depart",
               "itemTemplate": "BTActionNode.qml"
             },
             "properties": {
-              "name": "",
-              "inputParams": [],
-              "outputParams": []
+              "name": "Sum",
+              "inputParams": [
+                {
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "value": "",
+                  "type": "string"
+                }
+              ],
+              "outputParams": [
+                {
+                  "key": "DateAlerte",
+                  "value": "DateAlerte",
+                  "type": "entityKnowledge"
+                }
+              ]
             },
             "children": []
           },
