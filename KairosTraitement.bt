@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "615cacbd-31d1-4a89-b262-4ef6fb2d411d",
+    "uuid": "ef926850-fcdc-4107-bdfc-a66abf306fa9",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -123,7 +123,7 @@
                 },
                 "properties": {
                   "op1": {
-                    "value": "TempsTrajet",
+                    "value": "DistanceTrajet",
                     "type": "entityKnowledge"
                   },
                   "op2": {
@@ -209,7 +209,7 @@
                 },
                 "properties": {
                   "op1": {
-                    "value": "TempsTrajet",
+                    "value": "DistanceTrajet",
                     "type": "entityKnowledge"
                   },
                   "op2": {
