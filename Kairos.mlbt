@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "c7784541-9eb3-459c-bf90-d8dea99cbb3b",
+    "uuid": "e8870698-0eb1-4f60-a976-b57ec1f2ac7f",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -17,6 +17,40 @@
         },
         "properties": {},
         "children": [
+          {
+            "id": "63e9e678-e536-45cb-8cba-2c32bc9b5466",
+            "activated": true,
+            "type": "set",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSetNode.qml"
+            },
+            "properties": {
+              "destination": "TrajetMaxVelo",
+              "op": {
+                "value": "20",
+                "type": "integer"
+              }
+            },
+            "children": []
+          },
+          {
+            "id": "ec2e71dc-1bec-4c86-bb9f-38a92034ec40",
+            "activated": true,
+            "type": "set",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSetNode.qml"
+            },
+            "properties": {
+              "destination": "TrajetMaxPied",
+              "op": {
+                "value": "5",
+                "type": "integer"
+              }
+            },
+            "children": []
+          },
           {
             "id": "55b99379-adc7-42d1-b6fc-e5122d0a653d",
             "activated": true,
@@ -96,6 +130,23 @@
                     "properties": {
                       "behavior": {
                         "value": "KairosTraitement",
+                        "type": "uriPath"
+                      },
+                      "inputParams": []
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "b20f9dc3-ac08-44c6-a363-d5515760af69",
+                    "activated": true,
+                    "type": "embedded",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTEmbeddedNode.qml"
+                    },
+                    "properties": {
+                      "behavior": {
+                        "value": "KairosAlerte",
                         "type": "uriPath"
                       },
                       "inputParams": []
