@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "8bad9e23-6705-4c89-9f6a-32c6a663dd69",
+    "uuid": "b7aada1c-7c78-47e1-a61c-07d580a1d784",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -253,59 +253,6 @@
                 "children": []
               }
             ]
-          },
-          {
-            "id": "abf8f27e-ef41-4c33-b581-aa26872a7b92",
-            "activated": true,
-            "type": "action",
-            "metadata": {
-              "label": "Calcul Alerte - 30mn Depart",
-              "itemTemplate": "BTActionNode.qml"
-            },
-            "properties": {
-              "name": "Sum",
-              "inputParams": [
-                {
-                  "key": "DateReunion",
-                  "value": "DateReunion",
-                  "type": "entityKnowledge"
-                },
-                {
-                  "key": "NbreMinuteAlerte",
-                  "value": "-1800",
-                  "type": "real"
-                }
-              ],
-              "outputParams": [
-                {
-                  "key": "DateAlerte",
-                  "value": "DateAlerte",
-                  "type": "entityKnowledge"
-                }
-              ]
-            },
-            "children": []
-          },
-          {
-            "id": "b289ede8-3246-4ef3-a0b2-a267d1d5ce0b",
-            "activated": true,
-            "type": "condition",
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTConditionNode.qml"
-            },
-            "properties": {
-              "op1": {
-                "value": "CurrenteDate",
-                "type": "entityKnowledge"
-              },
-              "op2": {
-                "value": "DateAlerte",
-                "type": "entityKnowledge"
-              },
-              "op": ">="
-            },
-            "children": []
           }
         ]
       }
