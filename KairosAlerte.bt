@@ -1,10 +1,23 @@
 [
   {
-    "version": "0.1.2"
+    "version": "1.0.0"
   },
   {
-    "id": "df7c6a41-5365-4da9-8f70-b7f4c9450de5",
-    "name": "69ca39f8-4ed4-4c7d-94fd-77aa3076e628",
-    "children": []
+    "uuid": "88ebedf2-3551-4347-ac2d-6d05068c3ac0",
+    "name": "KairosAlerte",
+    "description": "",
+    "children": [
+      {
+        "id": "54431cc7-8d5e-4899-8b5c-6e496b360a67",
+        "activated": true,
+        "type": "sequence",
+        "metadata": {
+          "label": "",
+          "itemTemplate": "BTSequenceNode.qml"
+        },
+        "properties": {},
+        "children": []
+      }
+    ]
   }
 ]
