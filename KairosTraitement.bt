@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "b3bf8baf-a879-4ab7-af60-5a5d8abb5728",
+    "uuid": "90b14505-ab5f-4c4a-9a30-5c01d9f4f1db",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -268,17 +268,6 @@
                 "children": []
               }
             ]
-          },
-          {
-            "id": "94750c98-e280-47bd-8fbe-b736f190e64d",
-            "activated": true,
-            "type": "sequence",
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSequenceNode.qml"
-            },
-            "properties": {},
-            "children": []
           }
         ]
       }
