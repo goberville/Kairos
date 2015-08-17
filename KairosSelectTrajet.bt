@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "b4a13066-acf6-4c76-9eb0-6b37e366c0ac",
+    "uuid": "b9e99a16-ca32-4c0a-80bd-42955043fa2b",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -142,11 +142,11 @@
                     "activated": true,
                     "type": "action",
                     "metadata": {
-                      "label": "Meteo Depart",
+                      "label": "Calcul Depart",
                       "itemTemplate": "BTActionNode.qml"
                     },
                     "properties": {
-                      "name": "",
+                      "name": "CalculDepart",
                       "inputParams": [
                         {
                           "key": "EventID",
@@ -172,46 +172,15 @@
                           "key": "DateReunion",
                           "value": "DateReunion",
                           "type": "entityKnowledge"
-                        },
-                        {
-                          "key": "SourceOrDestination",
-                          "value": "source",
-                          "type": "string"
                         }
                       ],
                       "outputParams": [
                         {
-                          "key": "Meteo",
-                          "value": "Meteo",
+                          "key": "DateDepart",
+                          "value": "DateDepart",
                           "type": "entityKnowledge"
                         }
                       ]
-                    },
-                    "children": []
-                  },
-                  {
-                    "id": "5c7037b5-7388-4edd-823a-88459ab11699",
-                    "activated": true,
-                    "type": "action",
-                    "metadata": {
-                      "label": "Meteo Arrivée",
-                      "itemTemplate": "BTActionNode.qml"
-                    },
-                    "properties": {
-                      "name": "",
-                      "inputParams": [
-                        {
-                          "key": "EventID",
-                          "value": "",
-                          "type": "entityKnowledge"
-                        },
-                        {
-                          "key": "Type",
-                          "value": "destination",
-                          "type": "string"
-                        }
-                      ],
-                      "outputParams": []
                     },
                     "children": []
                   }
@@ -253,38 +222,45 @@
                     "activated": true,
                     "type": "action",
                     "metadata": {
-                      "label": "Meteo Depart",
+                      "label": "CalculDepart",
                       "itemTemplate": "BTActionNode.qml"
                     },
                     "properties": {
-                      "name": "",
+                      "name": "CalculDepart",
                       "inputParams": [
                         {
+                          "key": "EventID",
                           "value": "EventID",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DistanceTrajet",
+                          "value": "DistanceTrajetPlusRapide",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "TempsTrajet",
+                          "value": "TempsTrajetPlusRapide",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "ModeTrajet",
+                          "value": "ModeTrajetPlusRapide",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateReunion",
+                          "value": "DateReunion",
                           "type": "entityKnowledge"
                         }
                       ],
-                      "outputParams": []
-                    },
-                    "children": []
-                  },
-                  {
-                    "id": "9ac9cf67-a078-4ee2-a72c-2f7ec887f3f4",
-                    "activated": true,
-                    "type": "action",
-                    "metadata": {
-                      "label": "Meteo Arrivée",
-                      "itemTemplate": "BTActionNode.qml"
-                    },
-                    "properties": {
-                      "name": "",
-                      "inputParams": [
+                      "outputParams": [
                         {
-                          "value": "EventID",
+                          "key": "DateDepart",
+                          "value": "DateDepart",
                           "type": "entityKnowledge"
                         }
-                      ],
-                      "outputParams": []
+                      ]
                     },
                     "children": []
                   }
@@ -305,18 +281,45 @@
                     "activated": true,
                     "type": "action",
                     "metadata": {
-                      "label": "Meteo Depart",
+                      "label": "Calcu lDepart",
                       "itemTemplate": "BTActionNode.qml"
                     },
                     "properties": {
-                      "name": "",
+                      "name": "CalculDepart",
                       "inputParams": [
                         {
+                          "key": "EventID",
                           "value": "EventID",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DistanceTrajet",
+                          "value": "DistanceTrajetPlusCourtRapide",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "TempsTrajet",
+                          "value": "TempsTrajetPlusCourtRapide",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "ModeTrajet",
+                          "value": "ModeTrajetPlusCourtRapide",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateReunion",
+                          "value": "DateReunion",
                           "type": "entityKnowledge"
                         }
                       ],
-                      "outputParams": []
+                      "outputParams": [
+                        {
+                          "key": "DateDepart",
+                          "value": "DateDepart",
+                          "type": "entityKnowledge"
+                        }
+                      ]
                     },
                     "children": []
                   },
