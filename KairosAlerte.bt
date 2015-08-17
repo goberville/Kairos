@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "e1a081c4-b8b3-48cf-abf3-c8ff9eba73de",
+    "uuid": "2a7918c1-741c-497b-9646-60d7ee8b7507",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -17,6 +17,53 @@
         },
         "properties": {},
         "children": [
+          {
+            "id": "175150b2-4932-425e-907e-019fe3544d6c",
+            "activated": true,
+            "type": "priority",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSelectorPrio.qml"
+            },
+            "properties": {
+              "active": "false"
+            },
+            "children": [
+              {
+                "id": "69266192-96aa-455f-8cce-6d7949865493",
+                "activated": true,
+                "type": "sequence",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "id": "5333a2ad-b25c-4e26-af7b-0fc489ee8142",
+                    "activated": true,
+                    "type": "condition",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
+                    },
+                    "properties": {
+                      "op1": {
+                        "value": "true",
+                        "type": "boolean"
+                      },
+                      "op2": {
+                        "value": "true",
+                        "type": "boolean"
+                      },
+                      "op": "=="
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
           {
             "id": "ca9550c4-ec07-48cb-9a04-e6ff1322dffe",
             "activated": true,
