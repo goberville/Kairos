@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "24af083f-e25d-4bc0-a678-573e9be3291d",
+    "uuid": "33881277-9442-4ce8-9720-a67e24571d52",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -274,7 +274,12 @@
                     },
                     "properties": {
                       "name": "",
-                      "inputParams": [],
+                      "inputParams": [
+                        {
+                          "value": "EventID",
+                          "type": "entityKnowledge"
+                        }
+                      ],
                       "outputParams": []
                     },
                     "children": []
@@ -289,7 +294,12 @@
                     },
                     "properties": {
                       "name": "",
-                      "inputParams": [],
+                      "inputParams": [
+                        {
+                          "value": "EventID",
+                          "type": "entityKnowledge"
+                        }
+                      ],
                       "outputParams": []
                     },
                     "children": []
@@ -353,12 +363,17 @@
                     "activated": true,
                     "type": "action",
                     "metadata": {
-                      "label": "",
+                      "label": "Meteo Depart",
                       "itemTemplate": "BTActionNode.qml"
                     },
                     "properties": {
                       "name": "",
-                      "inputParams": [],
+                      "inputParams": [
+                        {
+                          "value": "EventID",
+                          "type": "entityKnowledge"
+                        }
+                      ],
                       "outputParams": []
                     },
                     "children": []
@@ -368,12 +383,17 @@
                     "activated": true,
                     "type": "action",
                     "metadata": {
-                      "label": "",
+                      "label": "Meteo Arrivée",
                       "itemTemplate": "BTActionNode.qml"
                     },
                     "properties": {
                       "name": "",
-                      "inputParams": [],
+                      "inputParams": [
+                        {
+                          "value": "EventID",
+                          "type": "entityKnowledge"
+                        }
+                      ],
                       "outputParams": []
                     },
                     "children": []
