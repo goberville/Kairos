@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "d490317a-b8ab-455f-b600-2216af37ebbe",
+    "uuid": "2591845a-fb9d-415c-8921-d11746c95147",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -188,8 +188,8 @@
                   "type": "entityKnowledge"
                 },
                 {
-                  "key": "ModeTrajet",
-                  "value": "ModeTrajet",
+                  "key": "Modetrajet",
+                  "value": "Modetrajet",
                   "type": "entityKnowledge"
                 }
               ],
