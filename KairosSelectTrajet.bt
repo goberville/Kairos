@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "33881277-9442-4ce8-9720-a67e24571d52",
+    "uuid": "7ce2cfaf-afc8-45a4-9f81-a1284cc37de7",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -22,7 +22,7 @@
             "activated": true,
             "type": "action",
             "metadata": {
-              "label": "Selectionne Trajet",
+              "label": "Selectionne mode trajet ",
               "itemTemplate": "BTActionNode.qml"
             },
             "properties": {
@@ -138,27 +138,6 @@
                     "children": []
                   },
                   {
-                    "id": "6ca83628-a841-42fd-893e-02f099d86854",
-                    "activated": true,
-                    "type": "condition",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
-                    },
-                    "properties": {
-                      "op1": {
-                        "value": "TrajetPlusRapide",
-                        "type": "entityKnowledge"
-                      },
-                      "op2": {
-                        "value": "false",
-                        "type": "boolean"
-                      },
-                      "op": "=="
-                    },
-                    "children": []
-                  },
-                  {
                     "id": "e703aa0f-44f7-46bb-9ec5-249a68e46c06",
                     "activated": true,
                     "type": "action",
@@ -171,16 +150,62 @@
                       "inputParams": [
                         {
                           "key": "EventID",
-                          "value": "EventID",
+                          "value": "DistanceTrajetPlusCourt",
                           "type": "entityKnowledge"
                         },
                         {
-                          "key": "type",
-                          "value": "source",
-                          "type": "string"
+                          "key": "Distancetrajet",
+                          "value": "DistanceTrajetPlusCourt",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "Tempstrajet",
+                          "value": "TempsTrajetPlusCourt",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "Modetrajet",
+                          "value": "ModeTrajetPlusCourt",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "Source",
+                          "value": "",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "Destination",
+                          "value": "",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateReunion",
+                          "value": "DateReunion",
+                          "type": "entityKnowledge"
                         }
                       ],
-                      "outputParams": []
+                      "outputParams": [
+                        {
+                          "key": "TempsTrajet",
+                          "value": "TempsTrajet",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DistanceTrajet",
+                          "value": "DistanceTrajet",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "ModeTrajet",
+                          "value": "ModeTrajet",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "DateDepart",
+                          "value": "DateDepart",
+                          "type": "entityKnowledge"
+                        }
+                      ]
                     },
                     "children": []
                   },
@@ -222,27 +247,6 @@
                 },
                 "properties": {},
                 "children": [
-                  {
-                    "id": "ff91b8cd-771c-41c5-8612-2db834ea70b1",
-                    "activated": true,
-                    "type": "condition",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
-                    },
-                    "properties": {
-                      "op1": {
-                        "value": "TrajectPlusCourt",
-                        "type": "entityKnowledge"
-                      },
-                      "op2": {
-                        "value": "false",
-                        "type": "boolean"
-                      },
-                      "op": "=="
-                    },
-                    "children": []
-                  },
                   {
                     "id": "b90b21f4-c45b-4740-a632-1d539dfb1984",
                     "activated": true,
@@ -317,48 +321,6 @@
                 "properties": {},
                 "children": [
                   {
-                    "id": "ec9f7d89-41e3-4a2a-a14e-3b73ceed6027",
-                    "activated": true,
-                    "type": "condition",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
-                    },
-                    "properties": {
-                      "op1": {
-                        "value": "TrajectPlusCourt",
-                        "type": "entityKnowledge"
-                      },
-                      "op2": {
-                        "value": "true",
-                        "type": "boolean"
-                      },
-                      "op": "=="
-                    },
-                    "children": []
-                  },
-                  {
-                    "id": "e58762d2-9712-414e-aa44-6436d7194bc3",
-                    "activated": true,
-                    "type": "condition",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
-                    },
-                    "properties": {
-                      "op1": {
-                        "value": "TrajetPlusRapide",
-                        "type": "entityKnowledge"
-                      },
-                      "op2": {
-                        "value": "true",
-                        "type": "boolean"
-                      },
-                      "op": "=="
-                    },
-                    "children": []
-                  },
-                  {
                     "id": "0dd7bf73-ccbd-4ab0-b3dd-da3729cd8af3",
                     "activated": true,
                     "type": "action",
@@ -401,40 +363,6 @@
                 ]
               }
             ]
-          },
-          {
-            "id": "032cfda4-6efa-40c4-ba12-34397ecffad0",
-            "activated": true,
-            "type": "set",
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSetNode.qml"
-            },
-            "properties": {
-              "destination": "DistanceTrajet",
-              "op": {
-                "value": "toto + 30",
-                "type": "entityKnowledge"
-              }
-            },
-            "children": []
-          },
-          {
-            "id": "0335c0b5-1d0f-4975-81cb-639f52483684",
-            "activated": true,
-            "type": "set",
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSetNode.qml"
-            },
-            "properties": {
-              "destination": "TempsTrajet",
-              "op": {
-                "value": "",
-                "type": "string"
-              }
-            },
-            "children": []
           }
         ]
       }
