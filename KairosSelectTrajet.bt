@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "baa5e483-8a76-4f60-9bb2-dabe61cb963a",
+    "uuid": "24af083f-e25d-4bc0-a678-573e9be3291d",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -95,56 +95,292 @@
             "children": []
           },
           {
-            "id": "e703aa0f-44f7-46bb-9ec5-249a68e46c06",
+            "id": "942f04d9-9b56-46bb-b007-f10d64eaa113",
             "activated": true,
-            "type": "action",
+            "type": "priority",
             "metadata": {
-              "label": "Meteo Depart",
-              "itemTemplate": "BTActionNode.qml"
+              "label": "",
+              "itemTemplate": "BTSelectorPrio.qml"
             },
             "properties": {
-              "name": "",
-              "inputParams": [
-                {
-                  "key": "EventID",
-                  "value": "EventID",
-                  "type": "entityKnowledge"
+              "active": "false"
+            },
+            "children": [
+              {
+                "id": "483e3262-24bc-444a-9e21-42b61286fe12",
+                "activated": true,
+                "type": "sequence",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
                 },
-                {
-                  "key": "type",
-                  "value": "source",
-                  "type": "string"
-                }
-              ],
-              "outputParams": []
-            },
-            "children": []
-          },
-          {
-            "id": "5c7037b5-7388-4edd-823a-88459ab11699",
-            "activated": true,
-            "type": "action",
-            "metadata": {
-              "label": "Meteo Arrivée",
-              "itemTemplate": "BTActionNode.qml"
-            },
-            "properties": {
-              "name": "",
-              "inputParams": [
-                {
-                  "key": "EventID",
-                  "value": "",
-                  "type": "entityKnowledge"
+                "properties": {},
+                "children": [
+                  {
+                    "id": "4a35df76-a317-4724-844b-8a77b9599817",
+                    "activated": true,
+                    "type": "condition",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
+                    },
+                    "properties": {
+                      "op1": {
+                        "value": "TrajectPlusCourt",
+                        "type": "entityKnowledge"
+                      },
+                      "op2": {
+                        "value": "true",
+                        "type": "boolean"
+                      },
+                      "op": "=="
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "6ca83628-a841-42fd-893e-02f099d86854",
+                    "activated": true,
+                    "type": "condition",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
+                    },
+                    "properties": {
+                      "op1": {
+                        "value": "TrajetPlusRapide",
+                        "type": "entityKnowledge"
+                      },
+                      "op2": {
+                        "value": "false",
+                        "type": "boolean"
+                      },
+                      "op": "=="
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "e703aa0f-44f7-46bb-9ec5-249a68e46c06",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "Meteo Depart",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "",
+                      "inputParams": [
+                        {
+                          "key": "EventID",
+                          "value": "EventID",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "type",
+                          "value": "source",
+                          "type": "string"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "5c7037b5-7388-4edd-823a-88459ab11699",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "Meteo Arrivée",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "",
+                      "inputParams": [
+                        {
+                          "key": "EventID",
+                          "value": "",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "Type",
+                          "value": "destination",
+                          "type": "string"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "8297ccab-793c-4a3b-bd1c-61056616c1b0",
+                "activated": true,
+                "type": "sequence",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
                 },
-                {
-                  "key": "Type",
-                  "value": "destination",
-                  "type": "string"
-                }
-              ],
-              "outputParams": []
-            },
-            "children": []
+                "properties": {},
+                "children": [
+                  {
+                    "id": "ff91b8cd-771c-41c5-8612-2db834ea70b1",
+                    "activated": true,
+                    "type": "condition",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
+                    },
+                    "properties": {
+                      "op1": {
+                        "value": "TrajectPlusCourt",
+                        "type": "entityKnowledge"
+                      },
+                      "op2": {
+                        "value": "false",
+                        "type": "boolean"
+                      },
+                      "op": "=="
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "b90b21f4-c45b-4740-a632-1d539dfb1984",
+                    "activated": true,
+                    "type": "condition",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
+                    },
+                    "properties": {
+                      "op1": {
+                        "value": "TrajetPlusRapide",
+                        "type": "entityKnowledge"
+                      },
+                      "op2": {
+                        "value": "true",
+                        "type": "boolean"
+                      },
+                      "op": "=="
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "2f4b0338-e0ce-4f98-86b9-91c557c0a5c4",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "Meteo Depart",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "",
+                      "inputParams": [],
+                      "outputParams": []
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "9ac9cf67-a078-4ee2-a72c-2f7ec887f3f4",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "Meteo Arrivée",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "",
+                      "inputParams": [],
+                      "outputParams": []
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "3810ee57-9191-441b-903a-e74ad8c30e78",
+                "activated": true,
+                "type": "sequence",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "id": "ec9f7d89-41e3-4a2a-a14e-3b73ceed6027",
+                    "activated": true,
+                    "type": "condition",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
+                    },
+                    "properties": {
+                      "op1": {
+                        "value": "TrajectPlusCourt",
+                        "type": "entityKnowledge"
+                      },
+                      "op2": {
+                        "value": "true",
+                        "type": "boolean"
+                      },
+                      "op": "=="
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "e58762d2-9712-414e-aa44-6436d7194bc3",
+                    "activated": true,
+                    "type": "condition",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
+                    },
+                    "properties": {
+                      "op1": {
+                        "value": "TrajetPlusRapide",
+                        "type": "entityKnowledge"
+                      },
+                      "op2": {
+                        "value": "true",
+                        "type": "boolean"
+                      },
+                      "op": "=="
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "0dd7bf73-ccbd-4ab0-b3dd-da3729cd8af3",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "",
+                      "inputParams": [],
+                      "outputParams": []
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "fba2f087-a7a4-425b-83d6-fb6a1e1d75bc",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "",
+                      "inputParams": [],
+                      "outputParams": []
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
           },
           {
             "id": "032cfda4-6efa-40c4-ba12-34397ecffad0",
