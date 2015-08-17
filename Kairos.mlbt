@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "6d8e0914-1859-4ea6-a25c-345b754d5f1a",
+    "uuid": "7119f929-b21f-4226-953c-9b9587190b1c",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -17,6 +17,40 @@
         },
         "properties": {},
         "children": [
+          {
+            "id": "78b19787-7830-4e5d-b6ec-f4ea33640eb5",
+            "activated": true,
+            "type": "set",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSetNode.qml"
+            },
+            "properties": {
+              "destination": "TrajetPlusRapide",
+              "op": {
+                "value": "true",
+                "type": "string"
+              }
+            },
+            "children": []
+          },
+          {
+            "id": "e968056c-ffa1-41d6-8f02-c4c58cc390e7",
+            "activated": true,
+            "type": "set",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSetNode.qml"
+            },
+            "properties": {
+              "destination": "TrajetPlusCourt",
+              "op": {
+                "value": "true",
+                "type": "string"
+              }
+            },
+            "children": []
+          },
           {
             "id": "63e9e678-e536-45cb-8cba-2c32bc9b5466",
             "activated": true,
