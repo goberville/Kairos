@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "7119f929-b21f-4226-953c-9b9587190b1c",
+    "uuid": "40216e14-9e22-4504-891e-0f466ca5fec8",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -45,7 +45,7 @@
             "properties": {
               "destination": "TrajetPlusCourt",
               "op": {
-                "value": "true",
+                "value": "false",
                 "type": "string"
               }
             },
