@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "2a7918c1-741c-497b-9646-60d7ee8b7507",
+    "uuid": "cd63fd07-6f83-4f4c-b3c2-7bedfcd7abd8",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -59,42 +59,69 @@
                       "op": "=="
                     },
                     "children": []
+                  },
+                  {
+                    "id": "ca9550c4-ec07-48cb-9a04-e6ff1322dffe",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "Calcul Alerte - 30mn Depart",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "Sum",
+                      "inputParams": [
+                        {
+                          "key": "DateDepart",
+                          "value": "DateDepart",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "NbreMinuteAlerte",
+                          "value": "-1800",
+                          "type": "real"
+                        }
+                      ],
+                      "outputParams": [
+                        {
+                          "key": "DateAlerte",
+                          "value": "DateAlerte",
+                          "type": "entityKnowledge"
+                        }
+                      ]
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "0d6fb7b9-20b9-4a93-b64d-98977d29a6fd",
+                "activated": true,
+                "type": "sequence",
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "id": "1e30ded3-429b-408e-95c9-69525d37f13f",
+                    "activated": true,
+                    "type": "action",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "",
+                      "inputParams": [],
+                      "outputParams": []
+                    },
+                    "children": []
                   }
                 ]
               }
             ]
-          },
-          {
-            "id": "ca9550c4-ec07-48cb-9a04-e6ff1322dffe",
-            "activated": true,
-            "type": "action",
-            "metadata": {
-              "label": "Calcul Alerte - 30mn Depart",
-              "itemTemplate": "BTActionNode.qml"
-            },
-            "properties": {
-              "name": "Sum",
-              "inputParams": [
-                {
-                  "key": "DateDepart",
-                  "value": "DateDepart",
-                  "type": "entityKnowledge"
-                },
-                {
-                  "key": "NbreMinuteAlerte",
-                  "value": "-1800",
-                  "type": "real"
-                }
-              ],
-              "outputParams": [
-                {
-                  "key": "DateAlerte",
-                  "value": "DateAlerte",
-                  "type": "entityKnowledge"
-                }
-              ]
-            },
-            "children": []
           },
           {
             "id": "10a019ba-244d-4aba-8069-1eb98ba2c7ee",
