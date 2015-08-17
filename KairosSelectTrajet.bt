@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "680abd94-a22e-4606-aab9-27c54c784211",
+    "uuid": "baa5e483-8a76-4f60-9bb2-dabe61cb963a",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -157,8 +157,8 @@
             "properties": {
               "destination": "DistanceTrajet",
               "op": {
-                "value": "",
-                "type": "string"
+                "value": "toto + 30",
+                "type": "entityKnowledge"
               }
             },
             "children": []
