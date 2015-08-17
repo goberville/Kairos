@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "7ce2cfaf-afc8-45a4-9f81-a1284cc37de7",
+    "uuid": "b4a13066-acf6-4c76-9eb0-6b37e366c0ac",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -150,7 +150,7 @@
                       "inputParams": [
                         {
                           "key": "EventID",
-                          "value": "DistanceTrajetPlusCourt",
+                          "value": "EventID",
                           "type": "entityKnowledge"
                         },
                         {
@@ -169,40 +169,20 @@
                           "type": "entityKnowledge"
                         },
                         {
-                          "key": "Source",
-                          "value": "",
-                          "type": "entityKnowledge"
-                        },
-                        {
-                          "key": "Destination",
-                          "value": "",
-                          "type": "entityKnowledge"
-                        },
-                        {
                           "key": "DateReunion",
                           "value": "DateReunion",
                           "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "SourceOrDestination",
+                          "value": "source",
+                          "type": "string"
                         }
                       ],
                       "outputParams": [
                         {
-                          "key": "TempsTrajet",
-                          "value": "TempsTrajet",
-                          "type": "entityKnowledge"
-                        },
-                        {
-                          "key": "DistanceTrajet",
-                          "value": "DistanceTrajet",
-                          "type": "entityKnowledge"
-                        },
-                        {
-                          "key": "ModeTrajet",
-                          "value": "ModeTrajet",
-                          "type": "entityKnowledge"
-                        },
-                        {
-                          "key": "DateDepart",
-                          "value": "DateDepart",
+                          "key": "Meteo",
+                          "value": "Meteo",
                           "type": "entityKnowledge"
                         }
                       ]
