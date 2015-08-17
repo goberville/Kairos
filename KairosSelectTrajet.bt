@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "8496806e-21df-4ac4-b6ee-de48c0bbcaf3",
+    "uuid": "9ede6394-234a-4918-b54f-a14e367c4bd1",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -179,6 +179,11 @@
                           "key": "DateDepart",
                           "value": "DateDepart",
                           "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "Modetrajet",
+                          "value": "Modetrajet",
+                          "type": "entityKnowledge"
                         }
                       ]
                     },
@@ -259,6 +264,11 @@
                           "key": "DateDepart",
                           "value": "DateDepart",
                           "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "Modetrajet",
+                          "value": "Modetrajet",
+                          "type": "entityKnowledge"
                         }
                       ]
                     },
@@ -317,6 +327,11 @@
                         {
                           "key": "DateDepart",
                           "value": "DateDepart",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "Modetrajet",
+                          "value": "Modetrajet",
                           "type": "entityKnowledge"
                         }
                       ]
