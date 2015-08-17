@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "010a2439-4396-40eb-85b6-9c94192edab6",
+    "uuid": "5f95b47e-1031-4755-8384-7abf8d5ea9c5",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -34,12 +34,12 @@
                   "type": "entityKnowledge"
                 },
                 {
-                  "key": "PlusCourt",
+                  "key": "TrajetPlusCourt",
                   "value": "TrajectPlusCourt",
                   "type": "entityKnowledge"
                 },
                 {
-                  "key": "PlusRapide",
+                  "key": "TrajetPlusRapide",
                   "value": "TrajetPlusRapide",
                   "type": "entityKnowledge"
                 }
