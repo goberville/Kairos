@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "cd63fd07-6f83-4f4c-b3c2-7bedfcd7abd8",
+    "uuid": "6240ec88-ba18-4a15-9443-b6d9fb817b73",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -109,13 +109,30 @@
                     "activated": true,
                     "type": "action",
                     "metadata": {
-                      "label": "",
+                      "label": "Calcul Alerte 60 mn Depart",
                       "itemTemplate": "BTActionNode.qml"
                     },
                     "properties": {
-                      "name": "",
-                      "inputParams": [],
-                      "outputParams": []
+                      "name": "Sum",
+                      "inputParams": [
+                        {
+                          "key": "DateDepart",
+                          "value": "DateDepart",
+                          "type": "entityKnowledge"
+                        },
+                        {
+                          "key": "NbreMinuteAlerte",
+                          "value": "-3600",
+                          "type": "real"
+                        }
+                      ],
+                      "outputParams": [
+                        {
+                          "key": "DateDepart",
+                          "value": "DateDepart",
+                          "type": "entityKnowledge"
+                        }
+                      ]
                     },
                     "children": []
                   }
