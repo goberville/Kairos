@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "b9e99a16-ca32-4c0a-80bd-42955043fa2b",
+    "uuid": "afe3aa5c-be6d-4d13-acc0-1eb55e37e8d2",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -322,30 +322,52 @@
                       ]
                     },
                     "children": []
-                  },
-                  {
-                    "id": "fba2f087-a7a4-425b-83d6-fb6a1e1d75bc",
-                    "activated": true,
-                    "type": "action",
-                    "metadata": {
-                      "label": "Meteo Arrivée",
-                      "itemTemplate": "BTActionNode.qml"
-                    },
-                    "properties": {
-                      "name": "",
-                      "inputParams": [
-                        {
-                          "value": "EventID",
-                          "type": "entityKnowledge"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": []
                   }
                 ]
               }
             ]
+          },
+          {
+            "id": "fba2f087-a7a4-425b-83d6-fb6a1e1d75bc",
+            "activated": true,
+            "type": "action",
+            "metadata": {
+              "label": "Meteo ",
+              "itemTemplate": "BTActionNode.qml"
+            },
+            "properties": {
+              "name": "Meteo",
+              "inputParams": [
+                {
+                  "key": "EventID",
+                  "value": "EventID",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "DateReunion",
+                  "value": "DateReunion",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "DateDepart",
+                  "value": "DateDepart",
+                  "type": "entityKnowledge"
+                }
+              ],
+              "outputParams": [
+                {
+                  "key": "MeteoDepart",
+                  "value": "MeteoDepart",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "MeteoArrivee",
+                  "value": "MeteoArrivee",
+                  "type": "entityKnowledge"
+                }
+              ]
+            },
+            "children": []
           }
         ]
       }
