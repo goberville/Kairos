@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "6240ec88-ba18-4a15-9443-b6d9fb817b73",
+    "uuid": "d490317a-b8ab-455f-b600-2216af37ebbe",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -49,12 +49,12 @@
                     },
                     "properties": {
                       "op1": {
-                        "value": "true",
-                        "type": "boolean"
+                        "value": "MeteoDepart",
+                        "type": "entityKnowledge"
                       },
                       "op2": {
-                        "value": "true",
-                        "type": "boolean"
+                        "value": "sun",
+                        "type": "string"
                       },
                       "op": "=="
                     },
@@ -175,6 +175,21 @@
                 {
                   "key": "EventID",
                   "value": "EventID",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "DateReunion",
+                  "value": "DateReunion",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "DateDepart",
+                  "value": "DateDepart",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "ModeTrajet",
+                  "value": "ModeTrajet",
                   "type": "entityKnowledge"
                 }
               ],
