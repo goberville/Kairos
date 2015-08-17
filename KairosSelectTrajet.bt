@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "5f95b47e-1031-4755-8384-7abf8d5ea9c5",
+    "uuid": "680abd94-a22e-4606-aab9-27c54c784211",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -46,13 +46,48 @@
               ],
               "outputParams": [
                 {
-                  "key": "TempsTrajet",
-                  "value": "TempsTrajet",
+                  "key": "DistanceTrajetPlusCourt",
+                  "value": "DistanceTrajetPlusCourt",
                   "type": "entityKnowledge"
                 },
                 {
-                  "key": "DistanceTrajet",
-                  "value": "DistanceTrajet",
+                  "key": "TempsTrajetPlusCourt",
+                  "value": "TempsTrajetPlusCourt",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "ModeTrajetPlusCourt",
+                  "value": "ModeTrajetPlusCourt",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "DistanceTrajetPlusRapide",
+                  "value": "DistanceTrajetPlusRapide",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "TempsTrajetPlusRapide",
+                  "value": "TempsTrajetPlusRapide",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "ModeTrajetPlusRapide",
+                  "value": "ModeTrajetPlusRapide",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "DistanceTrajetPlusCourtRapide",
+                  "value": "DistanceTrajetPlusCourtRapide",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "TempsTrajetPlusCourtRapide",
+                  "value": "TempsTrajetPlusCourtRapide",
+                  "type": "entityKnowledge"
+                },
+                {
+                  "key": "ModeTrajetPlusCourtRapide",
+                  "value": "ModeTrajetPlusCourtRapide",
                   "type": "entityKnowledge"
                 }
               ]
