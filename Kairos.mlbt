@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "04088eee-150b-40dd-9e23-d4c2a241f77e",
+    "uuid": "d9649a15-d767-4f41-9e09-bd1f062219e6",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -26,10 +26,10 @@
               "itemTemplate": "BTSetNode.qml"
             },
             "properties": {
-              "destination": "TrajetPlusRapide",
+              "destination": "TrajetPlusCourt",
               "op": {
-                "value": "true",
-                "type": "string"
+                "value": "false",
+                "type": "boolean"
               }
             },
             "children": []
