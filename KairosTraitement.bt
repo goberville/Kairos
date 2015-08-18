@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "b6149632-d526-42c6-a440-7607d717ac48",
+    "uuid": "3e9b14f0-8a0c-4aa6-b815-21cd5921d21a",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -289,6 +289,11 @@
                 {
                   "key": "MyMessage",
                   "value": "\"sddsdsdsdsd\"",
+                  "type": "string"
+                },
+                {
+                  "key": "branche",
+                  "value": "kairosTraitement",
                   "type": "string"
                 }
               ],
