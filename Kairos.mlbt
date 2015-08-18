@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "40216e14-9e22-4504-891e-0f466ca5fec8",
+    "uuid": "e992dc1d-6658-44a1-b6e8-51708893802a",
     "name": "Kairos",
     "description": "",
     "children": [
@@ -62,7 +62,7 @@
             "properties": {
               "destination": "TrajetMaxVelo",
               "op": {
-                "value": "20",
+                "value": "20000",
                 "type": "integer"
               }
             },
@@ -79,7 +79,7 @@
             "properties": {
               "destination": "TrajetMaxPied",
               "op": {
-                "value": "5",
+                "value": "5000",
                 "type": "integer"
               }
             },
