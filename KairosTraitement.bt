@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "90b14505-ab5f-4c4a-9a30-5c01d9f4f1db",
+    "uuid": "8a7fdcac-5dc4-4085-86f3-f7912733b08c",
     "name": "KairosTraitement",
     "description": "",
     "children": [
@@ -28,62 +28,77 @@
             "properties": {},
             "children": [
               {
-                "id": "168f51b2-ed23-47d3-812f-5d27f52a05c6",
+                "id": "b6f36e4a-0e87-45a5-a71a-78aa709259f1",
                 "activated": true,
-                "type": "condition",
+                "type": "priority",
                 "metadata": {
                   "label": "",
-                  "itemTemplate": "BTConditionNode.qml"
+                  "itemTemplate": "BTSelectorPrio.qml"
                 },
                 "properties": {
-                  "op1": {
-                    "value": "PreférenceTrajetAuto",
-                    "type": "entityKnowledge"
-                  },
-                  "op2": {
-                    "value": "true",
-                    "type": "boolean"
-                  },
-                  "op": "=="
+                  "active": "false"
                 },
-                "children": []
-              },
-              {
-                "id": "fa7ab231-ff43-445b-b91d-06fd878b3d27",
-                "activated": true,
-                "type": "action",
-                "metadata": {
-                  "label": "Trajet Auto",
-                  "itemTemplate": "BTActionNode.qml"
-                },
-                "properties": {
-                  "name": "TraitementEvent",
-                  "inputParams": [
-                    {
-                      "key": "EventID",
-                      "value": "EventID",
-                      "type": "entityKnowledge"
+                "children": [
+                  {
+                    "id": "168f51b2-ed23-47d3-812f-5d27f52a05c6",
+                    "activated": true,
+                    "type": "condition",
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
                     },
-                    {
-                      "key": "ModeTransport",
-                      "value": "driving",
-                      "type": "string"
-                    }
-                  ],
-                  "outputParams": [
-                    {
-                      "key": "DistanceTrajet",
-                      "value": "DistanceTrajetAuto",
-                      "type": "entityKnowledge"
+                    "properties": {
+                      "op1": {
+                        "value": "PreférenceTrajetAuto",
+                        "type": "entityKnowledge"
+                      },
+                      "op2": {
+                        "value": "true",
+                        "type": "boolean"
+                      },
+                      "op": "=="
                     },
-                    {
-                      "key": "TempsTrajet",
-                      "value": "TempsTrajetAuto",
-                      "type": "entityKnowledge"
-                    }
-                  ]
-                },
-                "children": []
+                    "children": [
+                      {
+                        "id": "fa7ab231-ff43-445b-b91d-06fd878b3d27",
+                        "activated": true,
+                        "type": "action",
+                        "metadata": {
+                          "label": "Trajet Auto",
+                          "itemTemplate": "BTActionNode.qml"
+                        },
+                        "properties": {
+                          "name": "TraitementEvent",
+                          "inputParams": [
+                            {
+                              "key": "EventID",
+                              "value": "EventID",
+                              "type": "entityKnowledge"
+                            },
+                            {
+                              "key": "ModeTransport",
+                              "value": "driving",
+                              "type": "string"
+                            }
+                          ],
+                          "outputParams": [
+                            {
+                              "key": "DistanceTrajet",
+                              "value": "DistanceTrajetAuto",
+                              "type": "entityKnowledge"
+                            },
+                            {
+                              "key": "TempsTrajet",
+                              "value": "TempsTrajetAuto",
+                              "type": "entityKnowledge"
+                            }
+                          ]
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
