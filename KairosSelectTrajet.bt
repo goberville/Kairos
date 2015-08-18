@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "6855e850-4387-40ab-9c28-f449df08fe85",
+    "uuid": "e61377e6-3c9f-4c59-8bde-f1e4f0addddf",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -17,6 +17,32 @@
         },
         "properties": {},
         "children": [
+          {
+            "id": "d38b8b1e-fb32-4d5a-aa32-a8e013d5980e",
+            "activated": true,
+            "type": "action",
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTActionNode.qml"
+            },
+            "properties": {
+              "name": "Test",
+              "inputParams": [
+                {
+                  "key": "MyMessage",
+                  "value": "lsklqsklqsklqs",
+                  "type": "string"
+                },
+                {
+                  "key": "branche",
+                  "value": "KairosSelectTrajet",
+                  "type": "string"
+                }
+              ],
+              "outputParams": []
+            },
+            "children": []
+          },
           {
             "id": "6a614400-6a12-49d0-a4fc-4d6135f0d8e0",
             "activated": true,
