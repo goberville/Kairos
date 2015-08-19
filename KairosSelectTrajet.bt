@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "a23eac4d-b866-44c7-946c-56d73c305fd4",
+    "uuid": "da8c1c4d-5cd9-4775-85c3-4735e05cf8ba",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -44,32 +44,16 @@
             "children": []
           },
           {
-            "id": "6a614400-6a12-49d0-a4fc-4d6135f0d8e0",
+            "id": "651f0863-298f-4114-83fa-a2754cf8f98b",
             "activated": true,
             "type": "action",
             "metadata": {
-              "label": "Choix trajet",
+              "label": "",
               "itemTemplate": "BTActionNode.qml"
             },
             "properties": {
-              "name": "ChoixTrajet",
-              "inputParams": [
-                {
-                  "key": "EventID",
-                  "value": "EventID",
-                  "type": "entityKnowledge"
-                },
-                {
-                  "key": "TrajetPlusCourt",
-                  "value": "TrajectPlusCourt",
-                  "type": "entityKnowledge"
-                },
-                {
-                  "key": "TrajetPlusRapide",
-                  "value": "TrajetPlusRapide",
-                  "type": "entityKnowledge"
-                }
-              ],
+              "name": "TraitementTrajet",
+              "inputParams": [],
               "outputParams": []
             },
             "children": []
