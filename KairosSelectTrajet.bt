@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "f994d1b7-d941-4649-afb1-af72216dd6a4",
+    "uuid": "617acbe3-5f0d-4806-9ce0-94d58c8db948",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -52,7 +52,7 @@
               "itemTemplate": "BTActionNode.qml"
             },
             "properties": {
-              "name": "SelectTraject",
+              "name": "ChoixTrajet",
               "inputParams": [
                 {
                   "key": "EventID",
