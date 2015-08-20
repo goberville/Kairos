@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "afc7ab36-1efb-4223-9fc7-b775c1ea67ab",
+    "uuid": "f0e0da26-c565-4b1a-82d1-d4d626ca1ca0",
     "name": "KairosAlerte",
     "description": "",
     "children": [
@@ -109,7 +109,7 @@
                     "activated": true,
                     "type": "action",
                     "metadata": {
-                      "label": "Calcul Alerte 60 mn Depart",
+                      "label": "Calcul Alerte -60 mn Depart",
                       "itemTemplate": "BTActionNode.qml"
                     },
                     "properties": {
