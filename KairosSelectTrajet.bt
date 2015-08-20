@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "38f4a2fe-39ec-47b1-897a-60e6b506add3",
+    "uuid": "5954643f-8194-43e2-a7e6-8dd47e27ccc4",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -142,7 +142,7 @@
                     },
                     "properties": {
                       "op1": {
-                        "value": "TrajectPlusCourt",
+                        "value": "TrajetPlusCourt",
                         "type": "entityKnowledge"
                       },
                       "op2": {
