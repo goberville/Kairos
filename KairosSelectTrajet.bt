@@ -3,7 +3,7 @@
     "version": "1.0.0"
   },
   {
-    "uuid": "db0e23f2-0bb4-47b9-b2ad-12e202a159ef",
+    "uuid": "38f4a2fe-39ec-47b1-897a-60e6b506add3",
     "name": "KairosSelectTrajet",
     "description": "",
     "children": [
@@ -53,7 +53,13 @@
             },
             "properties": {
               "name": "TraitementTrajet",
-              "inputParams": [],
+              "inputParams": [
+                {
+                  "key": "EventID",
+                  "value": "EventID",
+                  "type": "entityKnowledge"
+                }
+              ],
               "outputParams": [
                 {
                   "key": "DistanceTrajetPlusCourt",
