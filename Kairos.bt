@@ -90,6 +90,22 @@
               "label": ""
             },
             "properties": {
+              "destination": "PositionCurrent",
+              "op": {
+                "type": "string",
+                "value": "\"\""
+              }
+            },
+            "children": [],
+            "id": "e449a933-1a52-4fa0-8cdf-237ec6177545",
+            "type": "set"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
               "destination": "OrigineSource",
               "op": {
                 "type": "string",
