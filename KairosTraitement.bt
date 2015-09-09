@@ -50,8 +50,7 @@
           {
             "activated": true,
             "metadata": {
-              "label": "",
-              "itemTemplate": "BTSelectorPrio.qml"
+              "label": ""
             },
             "properties": {
               "active": "false"
@@ -60,13 +59,12 @@
               {
                 "activated": true,
                 "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTConditionNode.qml"
+                  "label": ""
                 },
                 "properties": {
                   "op1": {
                     "type": "entityKnowledge",
-                    "value": "PreférenceTrajetAuto"
+                    "value": "Deplaced"
                   },
                   "op2": {
                     "type": "boolean",
@@ -75,234 +73,280 @@
                   "op": "=="
                 },
                 "children": [],
-                "id": "168f51b2-ed23-47d3-812f-5d27f52a05c6",
+                "id": "256d154d-f36a-49dd-b779-cb9d001fae2d",
                 "type": "condition"
               },
               {
                 "activated": true,
                 "metadata": {
-                  "label": "Trajet Auto",
-                  "itemTemplate": "BTActionNode.qml"
+                  "label": ""
                 },
-                "properties": {
-                  "name": "TraitementEvent",
-                  "inputParams": [
-                    {
-                      "key": "EventID",
-                      "type": "entityKnowledge",
-                      "value": "EventID"
+                "properties": {},
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSelectorPrio.qml"
                     },
-                    {
-                      "key": "ModeTransport",
-                      "type": "string",
-                      "value": "driving"
-                    }
-                  ],
-                  "outputParams": [
-                    {
-                      "key": "DistanceTrajet",
-                      "type": "entityKnowledge",
-                      "value": "DistanceTrajetAuto"
+                    "properties": {
+                      "active": "false"
                     },
-                    {
-                      "key": "TempsTrajet",
-                      "type": "entityKnowledge",
-                      "value": "TempsTrajetAuto"
-                    }
-                  ]
-                },
-                "children": [],
-                "id": "fa7ab231-ff43-445b-b91d-06fd878b3d27",
-                "type": "action"
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTConditionNode.qml"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "PreférenceTrajetAuto"
+                          },
+                          "op2": {
+                            "type": "boolean",
+                            "value": "false"
+                          },
+                          "op": "=="
+                        },
+                        "children": [],
+                        "id": "168f51b2-ed23-47d3-812f-5d27f52a05c6",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Trajet Auto",
+                          "itemTemplate": "BTActionNode.qml"
+                        },
+                        "properties": {
+                          "name": "TraitementEvent",
+                          "inputParams": [
+                            {
+                              "key": "EventID",
+                              "type": "entityKnowledge",
+                              "value": "EventID"
+                            },
+                            {
+                              "key": "ModeTransport",
+                              "type": "string",
+                              "value": "driving"
+                            }
+                          ],
+                          "outputParams": [
+                            {
+                              "key": "DistanceTrajet",
+                              "type": "entityKnowledge",
+                              "value": "DistanceTrajetAuto"
+                            },
+                            {
+                              "key": "TempsTrajet",
+                              "type": "entityKnowledge",
+                              "value": "TempsTrajetAuto"
+                            }
+                          ]
+                        },
+                        "children": [],
+                        "id": "fa7ab231-ff43-445b-b91d-06fd878b3d27",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "b6f36e4a-0e87-45a5-a71a-78aa709259f1",
+                    "type": "priority"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSelectorPrio.qml"
+                    },
+                    "properties": {
+                      "active": "false"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTConditionNode.qml"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "PreférenceTrajetVelo"
+                          },
+                          "op2": {
+                            "type": "boolean",
+                            "value": "false"
+                          },
+                          "op": "=="
+                        },
+                        "children": [],
+                        "id": "2fdf0e6d-c7f7-4834-aca4-100b9d5a3dee",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTConditionNode.qml"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "DistanceTrajetAuto"
+                          },
+                          "op2": {
+                            "type": "entityKnowledge",
+                            "value": "TrajetMaxVelo"
+                          },
+                          "op": ">"
+                        },
+                        "children": [],
+                        "id": "98585d30-a91b-4358-bf6c-3749121a92d0",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Trajet Velo",
+                          "itemTemplate": "BTActionNode.qml"
+                        },
+                        "properties": {
+                          "name": "TraitementEvent",
+                          "inputParams": [
+                            {
+                              "key": "EventID",
+                              "type": "entityKnowledge",
+                              "value": "EventID"
+                            },
+                            {
+                              "key": "ModeTransport",
+                              "type": "string",
+                              "value": "bicycling "
+                            }
+                          ],
+                          "outputParams": [
+                            {
+                              "key": "DistanceTrajet",
+                              "type": "entityKnowledge",
+                              "value": "DistanceTrajetVelo"
+                            },
+                            {
+                              "key": "TempsTrajet",
+                              "type": "entityKnowledge",
+                              "value": "TempsTrajetVelo"
+                            }
+                          ]
+                        },
+                        "children": [],
+                        "id": "070766e1-f36c-4225-a1f8-dd562bc402eb",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "55c7aa09-6f46-40ba-9cfd-4a023674a57d",
+                    "type": "priority"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSelectorPrio.qml"
+                    },
+                    "properties": {
+                      "active": "false"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTConditionNode.qml"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "PreférenceTrajetPied"
+                          },
+                          "op2": {
+                            "type": "boolean",
+                            "value": "false"
+                          },
+                          "op": "=="
+                        },
+                        "children": [],
+                        "id": "13674d8e-aebc-4821-9379-0855128b2f4c",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "",
+                          "itemTemplate": "BTConditionNode.qml"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "DistanceTrajetAuto"
+                          },
+                          "op2": {
+                            "type": "entityKnowledge",
+                            "value": "TrajetMaxPied"
+                          },
+                          "op": ">"
+                        },
+                        "children": [],
+                        "id": "cb4a84d6-a501-4645-8bd0-e24ac523a7a3",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Trajet à pied",
+                          "itemTemplate": "BTActionNode.qml"
+                        },
+                        "properties": {
+                          "name": "TraitementEvent",
+                          "inputParams": [
+                            {
+                              "key": "EventID",
+                              "type": "entityKnowledge",
+                              "value": "EventID"
+                            },
+                            {
+                              "key": "ModeTransport",
+                              "type": "string",
+                              "value": "walking "
+                            }
+                          ],
+                          "outputParams": [
+                            {
+                              "key": "DistanceTrajet",
+                              "type": "entityKnowledge",
+                              "value": "DistanceTrajetPied"
+                            },
+                            {
+                              "key": "TempsTrajet",
+                              "type": "entityKnowledge",
+                              "value": "TempsTrajetPied"
+                            }
+                          ]
+                        },
+                        "children": [],
+                        "id": "e6eec648-508e-4b08-8e65-901d37d2cfc3",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "1d889881-10d8-454f-8880-48c60d70a7af",
+                    "type": "priority"
+                  }
+                ],
+                "id": "686e0193-02bb-46b1-b084-69cc278b5e06",
+                "type": "sequence"
               }
             ],
-            "id": "b6f36e4a-0e87-45a5-a71a-78aa709259f1",
-            "type": "priority"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSelectorPrio.qml"
-            },
-            "properties": {
-              "active": "false"
-            },
-            "children": [
-              {
-                "activated": true,
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTConditionNode.qml"
-                },
-                "properties": {
-                  "op1": {
-                    "type": "entityKnowledge",
-                    "value": "PreférenceTrajetVelo"
-                  },
-                  "op2": {
-                    "type": "boolean",
-                    "value": "false"
-                  },
-                  "op": "=="
-                },
-                "children": [],
-                "id": "2fdf0e6d-c7f7-4834-aca4-100b9d5a3dee",
-                "type": "condition"
-              },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTConditionNode.qml"
-                },
-                "properties": {
-                  "op1": {
-                    "type": "entityKnowledge",
-                    "value": "DistanceTrajetAuto"
-                  },
-                  "op2": {
-                    "type": "entityKnowledge",
-                    "value": "TrajetMaxVelo"
-                  },
-                  "op": ">"
-                },
-                "children": [],
-                "id": "98585d30-a91b-4358-bf6c-3749121a92d0",
-                "type": "condition"
-              },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": "Trajet Velo",
-                  "itemTemplate": "BTActionNode.qml"
-                },
-                "properties": {
-                  "name": "TraitementEvent",
-                  "inputParams": [
-                    {
-                      "key": "EventID",
-                      "type": "entityKnowledge",
-                      "value": "EventID"
-                    },
-                    {
-                      "key": "ModeTransport",
-                      "type": "string",
-                      "value": "bicycling "
-                    }
-                  ],
-                  "outputParams": [
-                    {
-                      "key": "DistanceTrajet",
-                      "type": "entityKnowledge",
-                      "value": "DistanceTrajetVelo"
-                    },
-                    {
-                      "key": "TempsTrajet",
-                      "type": "entityKnowledge",
-                      "value": "TempsTrajetVelo"
-                    }
-                  ]
-                },
-                "children": [],
-                "id": "070766e1-f36c-4225-a1f8-dd562bc402eb",
-                "type": "action"
-              }
-            ],
-            "id": "55c7aa09-6f46-40ba-9cfd-4a023674a57d",
-            "type": "priority"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSelectorPrio.qml"
-            },
-            "properties": {
-              "active": "false"
-            },
-            "children": [
-              {
-                "activated": true,
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTConditionNode.qml"
-                },
-                "properties": {
-                  "op1": {
-                    "type": "entityKnowledge",
-                    "value": "PreférenceTrajetPied"
-                  },
-                  "op2": {
-                    "type": "boolean",
-                    "value": "false"
-                  },
-                  "op": "=="
-                },
-                "children": [],
-                "id": "13674d8e-aebc-4821-9379-0855128b2f4c",
-                "type": "condition"
-              },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTConditionNode.qml"
-                },
-                "properties": {
-                  "op1": {
-                    "type": "entityKnowledge",
-                    "value": "DistanceTrajetAuto"
-                  },
-                  "op2": {
-                    "type": "entityKnowledge",
-                    "value": "TrajetMaxPied"
-                  },
-                  "op": ">"
-                },
-                "children": [],
-                "id": "cb4a84d6-a501-4645-8bd0-e24ac523a7a3",
-                "type": "condition"
-              },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": "Trajet à pied",
-                  "itemTemplate": "BTActionNode.qml"
-                },
-                "properties": {
-                  "name": "TraitementEvent",
-                  "inputParams": [
-                    {
-                      "key": "EventID",
-                      "type": "entityKnowledge",
-                      "value": "EventID"
-                    },
-                    {
-                      "key": "ModeTransport",
-                      "type": "string",
-                      "value": "walking "
-                    }
-                  ],
-                  "outputParams": [
-                    {
-                      "key": "DistanceTrajet",
-                      "type": "entityKnowledge",
-                      "value": "DistanceTrajetPied"
-                    },
-                    {
-                      "key": "TempsTrajet",
-                      "type": "entityKnowledge",
-                      "value": "TempsTrajetPied"
-                    }
-                  ]
-                },
-                "children": [],
-                "id": "e6eec648-508e-4b08-8e65-901d37d2cfc3",
-                "type": "action"
-              }
-            ],
-            "id": "1d889881-10d8-454f-8880-48c60d70a7af",
+            "id": "d56262fb-94c7-4923-b002-02e36a98abda",
             "type": "priority"
           },
           {
