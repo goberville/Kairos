@@ -4,7 +4,7 @@
   },
   {
     "metadata": {
-      "label": "KairosTraitement"
+      "label": "KairosAlerte"
     },
     "properties": {},
     "children": [
@@ -19,38 +19,125 @@
           {
             "activated": true,
             "metadata": {
-              "label": "Geolocalisation"
+              "label": "",
+              "itemTemplate": "BTSelectorPrio.qml"
             },
             "properties": {
-              "name": "Geolocalisation",
-              "inputParams": [
-                {
-                  "key": "PositionCurrent",
-                  "type": "entityKnowledge",
-                  "value": "PositionCurrent"
-                },
-                {
-                  "key": "EventID",
-                  "type": "entityKnowledge",
-                  "value": "EventID"
-                }
-              ],
-              "outputParams": [
-                {
-                  "key": "PositionCurrent",
-                  "type": "entityKnowledge",
-                  "value": "PositionCurrent"
-                },
-                {
-                  "key": "ChangedPosition",
-                  "type": "entityKnowledge",
-                  "value": "ChangedPosition"
-                }
-              ]
+              "active": "false"
             },
-            "children": [],
-            "id": "e5f2cee8-36b4-4f89-90b9-0e449d86bb02",
-            "type": "action"
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTConditionNode.qml"
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "MeteoDepart"
+                      },
+                      "op2": {
+                        "type": "string",
+                        "value": "sun"
+                      },
+                      "op": "=="
+                    },
+                    "children": [],
+                    "id": "5333a2ad-b25c-4e26-af7b-0fc489ee8142",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Calcul Alerte - 30mn Depart",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "Sum",
+                      "inputParams": [
+                        {
+                          "key": "DateDepart",
+                          "type": "entityKnowledge",
+                          "value": "DateDepart"
+                        },
+                        {
+                          "key": "NbreMinuteAlerte",
+                          "type": "real",
+                          "value": "-1800"
+                        }
+                      ],
+                      "outputParams": [
+                        {
+                          "key": "DateAlerte",
+                          "type": "entityKnowledge",
+                          "value": "DateAlerte"
+                        }
+                      ]
+                    },
+                    "children": [],
+                    "id": "ca9550c4-ec07-48cb-9a04-e6ff1322dffe",
+                    "type": "action"
+                  }
+                ],
+                "id": "69266192-96aa-455f-8cce-6d7949865493",
+                "type": "sequence"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Calcul Alerte -60 mn Depart",
+                      "itemTemplate": "BTActionNode.qml"
+                    },
+                    "properties": {
+                      "name": "Sum",
+                      "inputParams": [
+                        {
+                          "key": "DateDepart",
+                          "type": "entityKnowledge",
+                          "value": "DateDepart"
+                        },
+                        {
+                          "key": "NbreMinuteAlerte",
+                          "type": "real",
+                          "value": "-3600"
+                        }
+                      ],
+                      "outputParams": [
+                        {
+                          "key": "DateDepart",
+                          "type": "entityKnowledge",
+                          "value": "DateDepart"
+                        }
+                      ]
+                    },
+                    "children": [],
+                    "id": "1e30ded3-429b-408e-95c9-69525d37f13f",
+                    "type": "action"
+                  }
+                ],
+                "id": "0d6fb7b9-20b9-4a93-b64d-98977d29a6fd",
+                "type": "sequence"
+              }
+            ],
+            "id": "175150b2-4932-425e-907e-019fe3544d6c",
+            "type": "priority"
           },
           {
             "activated": true,
@@ -64,316 +151,69 @@
               {
                 "activated": true,
                 "metadata": {
-                  "label": ""
+                  "label": "",
+                  "itemTemplate": "BTConditionNode.qml"
                 },
                 "properties": {
                   "op1": {
                     "type": "entityKnowledge",
-                    "value": "ChangedPosition"
+                    "value": "CurrenteDate"
                   },
                   "op2": {
-                    "type": "boolean",
-                    "value": "false"
+                    "type": "entityKnowledge",
+                    "value": "DateAlerte"
                   },
-                  "op": "=="
+                  "op": "<"
                 },
                 "children": [],
-                "id": "256d154d-f36a-49dd-b779-cb9d001fae2d",
+                "id": "10a019ba-244d-4aba-8069-1eb98ba2c7ee",
                 "type": "condition"
               },
               {
                 "activated": true,
                 "metadata": {
-                  "label": ""
+                  "label": "Send Msg Alerte",
+                  "itemTemplate": "BTActionNode.qml"
                 },
-                "properties": {},
-                "children": [
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTSelectorPrio.qml"
+                "properties": {
+                  "name": "Alerte",
+                  "inputParams": [
+                    {
+                      "key": "EventID",
+                      "type": "entityKnowledge",
+                      "value": "EventID"
                     },
-                    "properties": {
-                      "active": "false"
+                    {
+                      "key": "DateReunion",
+                      "type": "entityKnowledge",
+                      "value": "DateReunion"
                     },
-                    "children": [
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
-                        },
-                        "properties": {
-                          "op1": {
-                            "type": "entityKnowledge",
-                            "value": "PreférenceTrajetAuto"
-                          },
-                          "op2": {
-                            "type": "boolean",
-                            "value": "false"
-                          },
-                          "op": "=="
-                        },
-                        "children": [],
-                        "id": "168f51b2-ed23-47d3-812f-5d27f52a05c6",
-                        "type": "condition"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "Trajet Auto",
-                          "itemTemplate": "BTActionNode.qml"
-                        },
-                        "properties": {
-                          "name": "TraitementEvent",
-                          "inputParams": [
-                            {
-                              "key": "EventID",
-                              "type": "entityKnowledge",
-                              "value": "EventID"
-                            },
-                            {
-                              "key": "ModeTransport",
-                              "type": "string",
-                              "value": "driving"
-                            },
-                            {
-                              "key": "PositionCurrent",
-                              "type": "entityKnowledge",
-                              "value": "PositionCurrent"
-                            }
-                          ],
-                          "outputParams": [
-                            {
-                              "key": "DistanceTrajet",
-                              "type": "entityKnowledge",
-                              "value": "DistanceTrajetAuto"
-                            },
-                            {
-                              "key": "TempsTrajet",
-                              "type": "entityKnowledge",
-                              "value": "TempsTrajetAuto"
-                            }
-                          ]
-                        },
-                        "children": [],
-                        "id": "fa7ab231-ff43-445b-b91d-06fd878b3d27",
-                        "type": "action"
-                      }
-                    ],
-                    "id": "b6f36e4a-0e87-45a5-a71a-78aa709259f1",
-                    "type": "priority"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTSelectorPrio.qml"
+                    {
+                      "key": "DateDepart",
+                      "type": "entityKnowledge",
+                      "value": "DateDepart"
                     },
-                    "properties": {
-                      "active": "false"
-                    },
-                    "children": [
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
-                        },
-                        "properties": {
-                          "op1": {
-                            "type": "entityKnowledge",
-                            "value": "PreférenceTrajetVelo"
-                          },
-                          "op2": {
-                            "type": "boolean",
-                            "value": "false"
-                          },
-                          "op": "=="
-                        },
-                        "children": [],
-                        "id": "2fdf0e6d-c7f7-4834-aca4-100b9d5a3dee",
-                        "type": "condition"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
-                        },
-                        "properties": {
-                          "op1": {
-                            "type": "entityKnowledge",
-                            "value": "DistanceTrajetAuto"
-                          },
-                          "op2": {
-                            "type": "entityKnowledge",
-                            "value": "TrajetMaxVelo"
-                          },
-                          "op": ">"
-                        },
-                        "children": [],
-                        "id": "98585d30-a91b-4358-bf6c-3749121a92d0",
-                        "type": "condition"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "Trajet Velo",
-                          "itemTemplate": "BTActionNode.qml"
-                        },
-                        "properties": {
-                          "name": "TraitementEvent",
-                          "inputParams": [
-                            {
-                              "key": "EventID",
-                              "type": "entityKnowledge",
-                              "value": "EventID"
-                            },
-                            {
-                              "key": "ModeTransport",
-                              "type": "string",
-                              "value": "bicycling "
-                            },
-                            {
-                              "key": "PositionCurrent",
-                              "type": "entityKnowledge",
-                              "value": "PositionCurrent"
-                            }
-                          ],
-                          "outputParams": [
-                            {
-                              "key": "DistanceTrajet",
-                              "type": "entityKnowledge",
-                              "value": "DistanceTrajetVelo"
-                            },
-                            {
-                              "key": "TempsTrajet",
-                              "type": "entityKnowledge",
-                              "value": "TempsTrajetVelo"
-                            }
-                          ]
-                        },
-                        "children": [],
-                        "id": "070766e1-f36c-4225-a1f8-dd562bc402eb",
-                        "type": "action"
-                      }
-                    ],
-                    "id": "55c7aa09-6f46-40ba-9cfd-4a023674a57d",
-                    "type": "priority"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTSelectorPrio.qml"
-                    },
-                    "properties": {
-                      "active": "false"
-                    },
-                    "children": [
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
-                        },
-                        "properties": {
-                          "op1": {
-                            "type": "entityKnowledge",
-                            "value": "PreférenceTrajetPied"
-                          },
-                          "op2": {
-                            "type": "boolean",
-                            "value": "false"
-                          },
-                          "op": "=="
-                        },
-                        "children": [],
-                        "id": "13674d8e-aebc-4821-9379-0855128b2f4c",
-                        "type": "condition"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "",
-                          "itemTemplate": "BTConditionNode.qml"
-                        },
-                        "properties": {
-                          "op1": {
-                            "type": "entityKnowledge",
-                            "value": "DistanceTrajetAuto"
-                          },
-                          "op2": {
-                            "type": "entityKnowledge",
-                            "value": "TrajetMaxPied"
-                          },
-                          "op": ">"
-                        },
-                        "children": [],
-                        "id": "cb4a84d6-a501-4645-8bd0-e24ac523a7a3",
-                        "type": "condition"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "Trajet à pied",
-                          "itemTemplate": "BTActionNode.qml"
-                        },
-                        "properties": {
-                          "name": "TraitementEvent",
-                          "inputParams": [
-                            {
-                              "key": "EventID",
-                              "type": "entityKnowledge",
-                              "value": "EventID"
-                            },
-                            {
-                              "key": "ModeTransport",
-                              "type": "string",
-                              "value": "walking "
-                            },
-                            {
-                              "key": "PositionCurrent",
-                              "type": "entityKnowledge",
-                              "value": "PositionCurrent"
-                            }
-                          ],
-                          "outputParams": [
-                            {
-                              "key": "DistanceTrajet",
-                              "type": "entityKnowledge",
-                              "value": "DistanceTrajetPied"
-                            },
-                            {
-                              "key": "TempsTrajet",
-                              "type": "entityKnowledge",
-                              "value": "TempsTrajetPied"
-                            }
-                          ]
-                        },
-                        "children": [],
-                        "id": "e6eec648-508e-4b08-8e65-901d37d2cfc3",
-                        "type": "action"
-                      }
-                    ],
-                    "id": "1d889881-10d8-454f-8880-48c60d70a7af",
-                    "type": "priority"
-                  }
-                ],
-                "id": "686e0193-02bb-46b1-b084-69cc278b5e06",
-                "type": "sequence"
+                    {
+                      "key": "Modetrajet",
+                      "type": "entityKnowledge",
+                      "value": "Modetrajet"
+                    }
+                  ],
+                  "outputParams": []
+                },
+                "children": [],
+                "id": "d64c9108-e51b-40e8-9569-64245f2f50f3",
+                "type": "action"
               }
             ],
-            "id": "d56262fb-94c7-4923-b002-02e36a98abda",
+            "id": "d0e3269c-fa61-4552-bead-ceafba7e7038",
             "type": "priority"
           }
         ],
-        "id": "0c2f0c00-1c28-40c8-89cc-0a564504c449",
+        "id": "54431cc7-8d5e-4899-8b5c-6e496b360a67",
         "type": "sequence"
       }
     ],
-    "id": "3e9b14f0-8a0c-4aa6-b815-21cd5921d21a"
+    "id": "f0e0da26-c565-4b1a-82d1-d4d626ca1ca0"
   }
 ]
