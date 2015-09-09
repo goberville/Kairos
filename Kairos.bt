@@ -87,6 +87,22 @@
           {
             "activated": true,
             "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "destination": "OrigineSource",
+              "op": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            "children": [],
+            "id": "33570de8-f36a-4a1a-9f8b-ea2803eb3059",
+            "type": "set"
+          },
+          {
+            "activated": true,
+            "metadata": {
               "label": "",
               "itemTemplate": "BTConditionNode.qml"
             },
