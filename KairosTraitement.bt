@@ -368,32 +368,6 @@
             ],
             "id": "d56262fb-94c7-4923-b002-02e36a98abda",
             "type": "priority"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": "Test",
-              "itemTemplate": "BTActionNode.qml"
-            },
-            "properties": {
-              "name": "Test",
-              "inputParams": [
-                {
-                  "key": "MyMessage",
-                  "type": "string",
-                  "value": "\"sddsdsdsdsd\""
-                },
-                {
-                  "key": "branche",
-                  "type": "string",
-                  "value": "kairosTraitement"
-                }
-              ],
-              "outputParams": []
-            },
-            "children": [],
-            "id": "5070b97e-456b-42c1-9afb-7657d0fd4b41",
-            "type": "action"
           }
         ],
         "id": "0c2f0c00-1c28-40c8-89cc-0a564504c449",
