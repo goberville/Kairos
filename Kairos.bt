@@ -1,16 +1,15 @@
 [
   {
-    "version": "1.0.0"
+    "version": "1.2.0"
   },
   {
-    "uuid": "ff9c54c9-8130-4e8f-995f-28536ce1c9fa",
-    "name": "Kairos",
-    "description": "",
+    "metadata": {
+      "label": "Kairos"
+    },
+    "properties": {},
     "children": [
       {
-        "id": "83ac086a-69af-46cc-a8d3-0c3db5934f1c",
         "activated": true,
-        "type": "sequence",
         "metadata": {
           "label": "",
           "itemTemplate": "BTSequenceNode.qml"
@@ -18,9 +17,7 @@
         "properties": {},
         "children": [
           {
-            "id": "78b19787-7830-4e5d-b6ec-f4ea33640eb5",
             "activated": true,
-            "type": "set",
             "metadata": {
               "label": "",
               "itemTemplate": "BTSetNode.qml"
@@ -28,16 +25,16 @@
             "properties": {
               "destination": "TrajetPlusCourt",
               "op": {
-                "value": "false",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "false"
               }
             },
-            "children": []
+            "children": [],
+            "id": "78b19787-7830-4e5d-b6ec-f4ea33640eb5",
+            "type": "set"
           },
           {
-            "id": "e968056c-ffa1-41d6-8f02-c4c58cc390e7",
             "activated": true,
-            "type": "set",
             "metadata": {
               "label": "",
               "itemTemplate": "BTSetNode.qml"
@@ -45,16 +42,16 @@
             "properties": {
               "destination": "TrajetPlusRapide",
               "op": {
-                "value": "true",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "true"
               }
             },
-            "children": []
+            "children": [],
+            "id": "e968056c-ffa1-41d6-8f02-c4c58cc390e7",
+            "type": "set"
           },
           {
-            "id": "63e9e678-e536-45cb-8cba-2c32bc9b5466",
             "activated": true,
-            "type": "set",
             "metadata": {
               "label": "",
               "itemTemplate": "BTSetNode.qml"
@@ -62,16 +59,16 @@
             "properties": {
               "destination": "TrajetMaxVelo",
               "op": {
-                "value": "20000",
-                "type": "integer"
+                "type": "integer",
+                "value": "20000"
               }
             },
-            "children": []
+            "children": [],
+            "id": "63e9e678-e536-45cb-8cba-2c32bc9b5466",
+            "type": "set"
           },
           {
-            "id": "ec2e71dc-1bec-4c86-bb9f-38a92034ec40",
             "activated": true,
-            "type": "set",
             "metadata": {
               "label": "",
               "itemTemplate": "BTSetNode.qml"
@@ -79,57 +76,55 @@
             "properties": {
               "destination": "TrajetMaxPied",
               "op": {
-                "value": "5000",
-                "type": "integer"
+                "type": "integer",
+                "value": "5000"
               }
             },
-            "children": []
+            "children": [],
+            "id": "ec2e71dc-1bec-4c86-bb9f-38a92034ec40",
+            "type": "set"
           },
           {
-            "id": "55b99379-adc7-42d1-b6fc-e5122d0a653d",
             "activated": true,
-            "type": "condition",
             "metadata": {
               "label": "",
               "itemTemplate": "BTConditionNode.qml"
             },
             "properties": {
               "op1": {
-                "value": "init",
-                "type": "entityKnowledge"
+                "type": "entityKnowledge",
+                "value": "init"
               },
               "op2": {
-                "value": "true",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "true"
               },
               "op": "=="
             },
-            "children": []
+            "children": [],
+            "id": "55b99379-adc7-42d1-b6fc-e5122d0a653d",
+            "type": "condition"
           },
           {
-            "id": "9d46217d-b93e-4932-980e-5f2d772f32b6",
             "activated": true,
-            "type": "until",
             "metadata": {
               "label": "",
               "itemTemplate": "BTUntilNode.qml"
             },
             "properties": {
               "op1": {
-                "value": "true",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "true"
               },
               "op2": {
-                "value": "false",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "false"
               },
               "op": "=="
             },
             "children": [
               {
-                "id": "9ab709ce-9fdd-4498-99ad-312d71197dcd",
                 "activated": true,
-                "type": "sequence",
                 "metadata": {
                   "label": "",
                   "itemTemplate": "BTSequenceNode.qml"
@@ -137,79 +132,86 @@
                 "properties": {},
                 "children": [
                   {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTEmbeddedNode.qml"
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "KairosCheckACtivity.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
                     "id": "027f14f5-067f-4854-94b2-f9437a5fb8bf",
+                    "type": "embedded"
+                  },
+                  {
                     "activated": true,
-                    "type": "embedded",
                     "metadata": {
                       "label": "",
                       "itemTemplate": "BTEmbeddedNode.qml"
                     },
                     "properties": {
                       "behavior": {
-                        "value": "KairosCheckACtivity",
-                        "type": "uriPath"
+                        "type": "uriPath",
+                        "value": "KairosTraitement.bt"
                       },
                       "inputParams": []
                     },
-                    "children": []
-                  },
-                  {
+                    "children": [],
                     "id": "a55e88c3-cfeb-4c67-943c-f33d984c142c",
+                    "type": "embedded"
+                  },
+                  {
                     "activated": true,
-                    "type": "embedded",
                     "metadata": {
                       "label": "",
                       "itemTemplate": "BTEmbeddedNode.qml"
                     },
                     "properties": {
                       "behavior": {
-                        "value": "KairosTraitement",
-                        "type": "uriPath"
+                        "type": "uriPath",
+                        "value": "KairosSelectTrajet.bt"
                       },
                       "inputParams": []
                     },
-                    "children": []
-                  },
-                  {
+                    "children": [],
                     "id": "1b15dbd6-6fc2-418c-9866-b351f563a9d1",
-                    "activated": true,
-                    "type": "embedded",
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTEmbeddedNode.qml"
-                    },
-                    "properties": {
-                      "behavior": {
-                        "value": "KairosSelectTrajet",
-                        "type": "uriPath"
-                      },
-                      "inputParams": []
-                    },
-                    "children": []
+                    "type": "embedded"
                   },
                   {
-                    "id": "b20f9dc3-ac08-44c6-a363-d5515760af69",
                     "activated": true,
-                    "type": "embedded",
                     "metadata": {
                       "label": "",
                       "itemTemplate": "BTEmbeddedNode.qml"
                     },
                     "properties": {
                       "behavior": {
-                        "value": "KairosAlerte",
-                        "type": "uriPath"
+                        "type": "uriPath",
+                        "value": "KairosAlerte.bt"
                       },
                       "inputParams": []
                     },
-                    "children": []
+                    "children": [],
+                    "id": "b20f9dc3-ac08-44c6-a363-d5515760af69",
+                    "type": "embedded"
                   }
-                ]
+                ],
+                "id": "9ab709ce-9fdd-4498-99ad-312d71197dcd",
+                "type": "sequence"
               }
-            ]
+            ],
+            "id": "9d46217d-b93e-4932-980e-5f2d772f32b6",
+            "type": "until"
           }
-        ]
+        ],
+        "id": "83ac086a-69af-46cc-a8d3-0c3db5934f1c",
+        "type": "sequence"
       }
-    ]
+    ],
+    "id": "ff9c54c9-8130-4e8f-995f-28536ce1c9fa"
   }
 ]
