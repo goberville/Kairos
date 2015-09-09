@@ -25,21 +25,26 @@
               "name": "Geolocalisation",
               "inputParams": [
                 {
-                  "key": "Position",
-                  "type": "entityKnowledge",
-                  "value": "PositionCurrent"
-                }
-              ],
-              "outputParams": [
-                {
-                  "key": "Position",
+                  "key": "PositionCurrent",
                   "type": "entityKnowledge",
                   "value": "PositionCurrent"
                 },
                 {
-                  "key": "StateChanged",
+                  "key": "EventID",
                   "type": "entityKnowledge",
-                  "value": "Deplaced"
+                  "value": "EventID"
+                }
+              ],
+              "outputParams": [
+                {
+                  "key": "PositionCurrent",
+                  "type": "entityKnowledge",
+                  "value": "PositionCurrent"
+                },
+                {
+                  "key": "ChangedPosition",
+                  "type": "entityKnowledge",
+                  "value": "ChangedPosition"
                 }
               ]
             },
