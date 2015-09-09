@@ -69,7 +69,7 @@
                 "properties": {
                   "op1": {
                     "type": "entityKnowledge",
-                    "value": "Deplaced"
+                    "value": "ChangedPosition"
                   },
                   "op2": {
                     "type": "boolean",
@@ -137,6 +137,11 @@
                               "key": "ModeTransport",
                               "type": "string",
                               "value": "driving"
+                            },
+                            {
+                              "key": "PositionCurrent",
+                              "type": "entityKnowledge",
+                              "value": "PositionCurrent"
                             }
                           ],
                           "outputParams": [
@@ -230,6 +235,11 @@
                               "key": "ModeTransport",
                               "type": "string",
                               "value": "bicycling "
+                            },
+                            {
+                              "key": "PositionCurrent",
+                              "type": "entityKnowledge",
+                              "value": "PositionCurrent"
                             }
                           ],
                           "outputParams": [
@@ -323,6 +333,11 @@
                               "key": "ModeTransport",
                               "type": "string",
                               "value": "walking "
+                            },
+                            {
+                              "key": "PositionCurrent",
+                              "type": "entityKnowledge",
+                              "value": "PositionCurrent"
                             }
                           ],
                           "outputParams": [
