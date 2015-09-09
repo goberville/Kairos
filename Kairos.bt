@@ -4,7 +4,7 @@
   },
   {
     "metadata": {
-      "label": "KairosCheckACtivity"
+      "label": "Kairos"
     },
     "properties": {},
     "children": [
@@ -23,78 +23,82 @@
               "itemTemplate": "BTSetNode.qml"
             },
             "properties": {
-              "destination": "CurrenteDate",
+              "destination": "TrajetPlusCourt",
               "op": {
-                "type": "entityKnowledge",
-                "value": "CurrenteDateSimuled"
+                "type": "boolean",
+                "value": "false"
               }
             },
             "children": [],
-            "id": "4c160208-fba0-4f3a-a373-47b818e431ea",
+            "id": "78b19787-7830-4e5d-b6ec-f4ea33640eb5",
             "type": "set"
           },
           {
             "activated": true,
             "metadata": {
-              "label": "GestionEvent",
-              "itemTemplate": "BTActionNode.qml"
+              "label": "",
+              "itemTemplate": "BTSetNode.qml"
             },
             "properties": {
-              "name": "GestionEvent",
-              "inputParams": [
-                {
-                  "key": "EventID",
-                  "type": "entityKnowledge",
-                  "value": "EventID"
-                },
-                {
-                  "key": "DateReunion",
-                  "type": "entityKnowledge",
-                  "value": "DateReunion"
-                }
-              ],
-              "outputParams": [
-                {
-                  "key": "EventID",
-                  "type": "entityKnowledge",
-                  "value": "EventID"
-                },
-                {
-                  "key": "DateReunion",
-                  "type": "entityKnowledge",
-                  "value": "DateReunion"
-                }
-              ]
+              "destination": "TrajetPlusRapide",
+              "op": {
+                "type": "boolean",
+                "value": "true"
+              }
             },
             "children": [],
-            "id": "9809a9e9-d127-4b29-acb9-cbfdbd751ccb",
-            "type": "action"
+            "id": "e968056c-ffa1-41d6-8f02-c4c58cc390e7",
+            "type": "set"
           },
           {
             "activated": true,
             "metadata": {
-              "label": "Position"
+              "label": "",
+              "itemTemplate": "BTSetNode.qml"
             },
             "properties": {
-              "name": "GetPosition",
-              "inputParams": [
-                {
-                  "key": "Position",
-                  "type": "entityKnowledge",
-                  "value": "OrigineSource"
-                }
-              ],
-              "outputParams": [
-                {
-                  "key": "Position",
-                  "type": "entityKnowledge",
-                  "value": "OrigineSource"
-                }
-              ]
+              "destination": "TrajetMaxVelo",
+              "op": {
+                "type": "integer",
+                "value": "20000"
+              }
             },
             "children": [],
-            "id": "12648f5d-7d8e-4cc1-8175-e0c02ac0609b",
-            "type": "action"
+            "id": "63e9e678-e536-45cb-8cba-2c32bc9b5466",
+            "type": "set"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": "",
+              "itemTemplate": "BTSetNode.qml"
+            },
+            "properties": {
+              "destination": "TrajetMaxPied",
+              "op": {
+                "type": "integer",
+                "value": "5000"
+              }
+            },
+            "children": [],
+            "id": "ec2e71dc-1bec-4c86-bb9f-38a92034ec40",
+            "type": "set"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "destination": "OrigineSource",
+              "op": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            "children": [],
+            "id": "33570de8-f36a-4a1a-9f8b-ea2803eb3059",
+            "type": "set"
           },
           {
             "activated": true,
@@ -105,49 +109,36 @@
             "properties": {
               "op1": {
                 "type": "entityKnowledge",
-                "value": "DateReunion"
+                "value": "init"
               },
               "op2": {
-                "type": "string",
-                "value": ""
+                "type": "boolean",
+                "value": "true"
               },
-              "op": "!="
+              "op": "=="
             },
             "children": [],
-            "id": "796a0e1c-357a-477d-8fc0-0199aca12e33",
+            "id": "55b99379-adc7-42d1-b6fc-e5122d0a653d",
             "type": "condition"
           },
           {
             "activated": true,
             "metadata": {
               "label": "",
-              "itemTemplate": "BTSelectorPrio.qml"
+              "itemTemplate": "BTUntilNode.qml"
             },
             "properties": {
-              "active": "false"
+              "op1": {
+                "type": "boolean",
+                "value": "true"
+              },
+              "op2": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "op": "=="
             },
             "children": [
-              {
-                "activated": true,
-                "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTConditionNode.qml"
-                },
-                "properties": {
-                  "op1": {
-                    "type": "entityKnowledge",
-                    "value": "DateReunion"
-                  },
-                  "op2": {
-                    "type": "entityKnowledge",
-                    "value": "CurrenteDate"
-                  },
-                  "op": ">"
-                },
-                "children": [],
-                "id": "29ce6b55-6e2a-4dd8-a603-ec59d96d0b86",
-                "type": "condition"
-              },
               {
                 "activated": true,
                 "metadata": {
@@ -160,73 +151,83 @@
                     "activated": true,
                     "metadata": {
                       "label": "",
-                      "itemTemplate": "BTActionNode.qml"
+                      "itemTemplate": "BTEmbeddedNode.qml"
                     },
                     "properties": {
-                      "name": "UpDateEvent",
-                      "inputParams": [
-                        {
-                          "key": "EventID",
-                          "type": "entityKnowledge",
-                          "value": "EventID"
-                        },
-                        {
-                          "key": "DateReunion",
-                          "type": "entityKnowledge",
-                          "value": "DateReunion"
-                        }
-                      ],
-                      "outputParams": [
-                        {
-                          "key": "EventID",
-                          "type": "entityKnowledge",
-                          "value": "EventID"
-                        },
-                        {
-                          "key": "DateReunion",
-                          "type": "entityKnowledge",
-                          "value": "DateReunion"
-                        }
-                      ]
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "KairosCheckACtivity.bt"
+                      },
+                      "inputParams": []
                     },
                     "children": [],
-                    "id": "b243d28f-0b23-48c1-bc2f-8194c3d42f64",
-                    "type": "action"
+                    "id": "027f14f5-067f-4854-94b2-f9437a5fb8bf",
+                    "type": "embedded"
                   },
                   {
                     "activated": true,
                     "metadata": {
                       "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
+                      "itemTemplate": "BTEmbeddedNode.qml"
                     },
                     "properties": {
-                      "op1": {
-                        "type": "boolean",
-                        "value": "true"
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "KairosTraitement.bt"
                       },
-                      "op2": {
-                        "type": "boolean",
-                        "value": "false"
-                      },
-                      "op": "=="
+                      "inputParams": []
                     },
                     "children": [],
-                    "id": "36e818a9-4919-44dd-b7ce-38f033965559",
-                    "type": "condition"
+                    "id": "a55e88c3-cfeb-4c67-943c-f33d984c142c",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTEmbeddedNode.qml"
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "KairosSelectTrajet.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "1b15dbd6-6fc2-418c-9866-b351f563a9d1",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTEmbeddedNode.qml"
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "KairosAlerte.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "b20f9dc3-ac08-44c6-a363-d5515760af69",
+                    "type": "embedded"
                   }
                 ],
-                "id": "0620d38a-7b34-42a0-86c4-edc201689cfc",
+                "id": "9ab709ce-9fdd-4498-99ad-312d71197dcd",
                 "type": "sequence"
               }
             ],
-            "id": "0e2f6393-1470-46c0-9614-cd897df0e14e",
-            "type": "priority"
+            "id": "9d46217d-b93e-4932-980e-5f2d772f32b6",
+            "type": "until"
           }
         ],
-        "id": "0543648f-bcc8-4cf6-8747-7781e3e9f849",
+        "id": "83ac086a-69af-46cc-a8d3-0c3db5934f1c",
         "type": "sequence"
       }
     ],
-    "id": "f78077af-98f8-4cea-a7b1-a3b0eef05782"
+    "id": "ff9c54c9-8130-4e8f-995f-28536ce1c9fa"
   }
 ]
