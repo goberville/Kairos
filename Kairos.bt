@@ -106,7 +106,7 @@
               "label": ""
             },
             "properties": {
-              "destination": "Deplaced",
+              "destination": "ChangedPosition",
               "op": {
                 "type": "boolean",
                 "value": "true"
