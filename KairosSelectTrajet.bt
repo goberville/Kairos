@@ -1,16 +1,15 @@
 [
   {
-    "version": "1.0.0"
+    "version": "1.2.0"
   },
   {
-    "uuid": "5954643f-8194-43e2-a7e6-8dd47e27ccc4",
-    "name": "KairosSelectTrajet",
-    "description": "",
+    "metadata": {
+      "label": "KairosSelectTrajet"
+    },
+    "properties": {},
     "children": [
       {
-        "id": "39a049e0-98e6-4a6a-9708-ad4e58fd297d",
         "activated": true,
-        "type": "sequence",
         "metadata": {
           "label": "",
           "itemTemplate": "BTSequenceNode.qml"
@@ -18,9 +17,40 @@
         "properties": {},
         "children": [
           {
-            "id": "d38b8b1e-fb32-4d5a-aa32-a8e013d5980e",
             "activated": true,
-            "type": "action",
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "active": "false"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "op1": {
+                    "type": "boolean",
+                    "value": "true"
+                  },
+                  "op2": {
+                    "type": "boolean",
+                    "value": "true"
+                  },
+                  "op": "=="
+                },
+                "children": [],
+                "id": "5e78355e-7138-4100-a479-5d0339f6869c",
+                "type": "condition"
+              }
+            ],
+            "id": "85577d76-1908-4161-8076-1bbd4ec8c76a",
+            "type": "priority"
+          },
+          {
+            "activated": true,
             "metadata": {
               "label": "",
               "itemTemplate": "BTActionNode.qml"
@@ -30,23 +60,23 @@
               "inputParams": [
                 {
                   "key": "MyMessage",
-                  "value": "lsklqsklqsklqs",
-                  "type": "string"
+                  "type": "string",
+                  "value": "lsklqsklqsklqs"
                 },
                 {
                   "key": "branche",
-                  "value": "KairosSelectTrajet",
-                  "type": "string"
+                  "type": "string",
+                  "value": "KairosSelectTrajet"
                 }
               ],
               "outputParams": []
             },
-            "children": []
+            "children": [],
+            "id": "d38b8b1e-fb32-4d5a-aa32-a8e013d5980e",
+            "type": "action"
           },
           {
-            "id": "651f0863-298f-4114-83fa-a2754cf8f98b",
             "activated": true,
-            "type": "action",
             "metadata": {
               "label": "",
               "itemTemplate": "BTActionNode.qml"
@@ -56,64 +86,64 @@
               "inputParams": [
                 {
                   "key": "EventID",
-                  "value": "EventID",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "EventID"
                 }
               ],
               "outputParams": [
                 {
                   "key": "DistanceTrajetPlusCourt",
-                  "value": "DistanceTrajetPlusCourt",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "DistanceTrajetPlusCourt"
                 },
                 {
                   "key": "TempsTrajetPlusCourt",
-                  "value": "TempsTrajetPlusCourt",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "TempsTrajetPlusCourt"
                 },
                 {
                   "key": "ModeTrajetPlusCourt",
-                  "value": "ModeTrajetPlusCourt",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "ModeTrajetPlusCourt"
                 },
                 {
                   "key": "DistanceTrajetPlusRapide",
-                  "value": "DistanceTrajetPlusRapide",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "DistanceTrajetPlusRapide"
                 },
                 {
                   "key": "TempsTrajetPlusRapide",
-                  "value": "TempsTrajetPlusRapide",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "TempsTrajetPlusRapide"
                 },
                 {
                   "key": "ModeTrajetPlusRapide",
-                  "value": "ModeTrajetPlusRapide",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "ModeTrajetPlusRapide"
                 },
                 {
                   "key": "DistanceTrajetPlusCourtRapide",
-                  "value": "DistanceTrajetPlusCourtRapide",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "DistanceTrajetPlusCourtRapide"
                 },
                 {
                   "key": "TempsTrajetPlusCourtRapide",
-                  "value": "TempsTrajetPlusCourtRapide",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "TempsTrajetPlusCourtRapide"
                 },
                 {
                   "key": "ModeTrajetPlusCourtRapide",
-                  "value": "ModeTrajetPlusCourtRapide",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "ModeTrajetPlusCourtRapide"
                 }
               ]
             },
-            "children": []
+            "children": [],
+            "id": "651f0863-298f-4114-83fa-a2754cf8f98b",
+            "type": "action"
           },
           {
-            "id": "942f04d9-9b56-46bb-b007-f10d64eaa113",
             "activated": true,
-            "type": "priority",
             "metadata": {
               "label": "",
               "itemTemplate": "BTSelectorPrio.qml"
@@ -123,9 +153,7 @@
             },
             "children": [
               {
-                "id": "483e3262-24bc-444a-9e21-42b61286fe12",
                 "activated": true,
-                "type": "sequence",
                 "metadata": {
                   "label": "",
                   "itemTemplate": "BTSequenceNode.qml"
@@ -133,30 +161,28 @@
                 "properties": {},
                 "children": [
                   {
-                    "id": "4a35df76-a317-4724-844b-8a77b9599817",
                     "activated": true,
-                    "type": "condition",
                     "metadata": {
                       "label": "",
                       "itemTemplate": "BTConditionNode.qml"
                     },
                     "properties": {
                       "op1": {
-                        "value": "TrajetPlusCourt",
-                        "type": "entityKnowledge"
+                        "type": "entityKnowledge",
+                        "value": "TrajetPlusCourt"
                       },
                       "op2": {
-                        "value": "true",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "true"
                       },
                       "op": "=="
                     },
-                    "children": []
+                    "children": [],
+                    "id": "4a35df76-a317-4724-844b-8a77b9599817",
+                    "type": "condition"
                   },
                   {
-                    "id": "e703aa0f-44f7-46bb-9ec5-249a68e46c06",
                     "activated": true,
-                    "type": "action",
                     "metadata": {
                       "label": "Calcul Depart",
                       "itemTemplate": "BTActionNode.qml"
@@ -166,51 +192,53 @@
                       "inputParams": [
                         {
                           "key": "EventID",
-                          "value": "EventID",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "EventID"
                         },
                         {
                           "key": "Distancetrajet",
-                          "value": "DistanceTrajetPlusCourt",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DistanceTrajetPlusCourt"
                         },
                         {
                           "key": "Tempstrajet",
-                          "value": "TempsTrajetPlusCourt",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "TempsTrajetPlusCourt"
                         },
                         {
                           "key": "Modetrajet",
-                          "value": "ModeTrajetPlusCourt",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "ModeTrajetPlusCourt"
                         },
                         {
                           "key": "DateReunion",
-                          "value": "DateReunion",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateReunion"
                         }
                       ],
                       "outputParams": [
                         {
                           "key": "DateDepart",
-                          "value": "DateDepart",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateDepart"
                         },
                         {
                           "key": "Modetrajet",
-                          "value": "Modetrajet",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "Modetrajet"
                         }
                       ]
                     },
-                    "children": []
+                    "children": [],
+                    "id": "e703aa0f-44f7-46bb-9ec5-249a68e46c06",
+                    "type": "action"
                   }
-                ]
+                ],
+                "id": "483e3262-24bc-444a-9e21-42b61286fe12",
+                "type": "sequence"
               },
               {
-                "id": "8297ccab-793c-4a3b-bd1c-61056616c1b0",
                 "activated": true,
-                "type": "sequence",
                 "metadata": {
                   "label": "",
                   "itemTemplate": "BTSequenceNode.qml"
@@ -218,30 +246,28 @@
                 "properties": {},
                 "children": [
                   {
-                    "id": "b90b21f4-c45b-4740-a632-1d539dfb1984",
                     "activated": true,
-                    "type": "condition",
                     "metadata": {
                       "label": "",
                       "itemTemplate": "BTConditionNode.qml"
                     },
                     "properties": {
                       "op1": {
-                        "value": "TrajetPlusRapide",
-                        "type": "entityKnowledge"
+                        "type": "entityKnowledge",
+                        "value": "TrajetPlusRapide"
                       },
                       "op2": {
-                        "value": "true",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "true"
                       },
                       "op": "=="
                     },
-                    "children": []
+                    "children": [],
+                    "id": "b90b21f4-c45b-4740-a632-1d539dfb1984",
+                    "type": "condition"
                   },
                   {
-                    "id": "2f4b0338-e0ce-4f98-86b9-91c557c0a5c4",
                     "activated": true,
-                    "type": "action",
                     "metadata": {
                       "label": "CalculDepart",
                       "itemTemplate": "BTActionNode.qml"
@@ -251,51 +277,53 @@
                       "inputParams": [
                         {
                           "key": "EventID",
-                          "value": "EventID",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "EventID"
                         },
                         {
                           "key": "DistanceTrajet",
-                          "value": "DistanceTrajetPlusRapide",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DistanceTrajetPlusRapide"
                         },
                         {
                           "key": "TempsTrajet",
-                          "value": "TempsTrajetPlusRapide",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "TempsTrajetPlusRapide"
                         },
                         {
                           "key": "ModeTrajet",
-                          "value": "ModeTrajetPlusRapide",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "ModeTrajetPlusRapide"
                         },
                         {
                           "key": "DateReunion",
-                          "value": "DateReunion",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateReunion"
                         }
                       ],
                       "outputParams": [
                         {
                           "key": "DateDepart",
-                          "value": "DateDepart",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateDepart"
                         },
                         {
                           "key": "Modetrajet",
-                          "value": "Modetrajet",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "Modetrajet"
                         }
                       ]
                     },
-                    "children": []
+                    "children": [],
+                    "id": "2f4b0338-e0ce-4f98-86b9-91c557c0a5c4",
+                    "type": "action"
                   }
-                ]
+                ],
+                "id": "8297ccab-793c-4a3b-bd1c-61056616c1b0",
+                "type": "sequence"
               },
               {
-                "id": "3810ee57-9191-441b-903a-e74ad8c30e78",
                 "activated": true,
-                "type": "sequence",
                 "metadata": {
                   "label": "",
                   "itemTemplate": "BTSequenceNode.qml"
@@ -303,9 +331,7 @@
                 "properties": {},
                 "children": [
                   {
-                    "id": "0dd7bf73-ccbd-4ab0-b3dd-da3729cd8af3",
                     "activated": true,
-                    "type": "action",
                     "metadata": {
                       "label": "Calcu lDepart",
                       "itemTemplate": "BTActionNode.qml"
@@ -315,53 +341,57 @@
                       "inputParams": [
                         {
                           "key": "EventID",
-                          "value": "EventID",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "EventID"
                         },
                         {
                           "key": "DistanceTrajet",
-                          "value": "DistanceTrajetPlusCourtRapide",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DistanceTrajetPlusCourtRapide"
                         },
                         {
                           "key": "TempsTrajet",
-                          "value": "TempsTrajetPlusCourtRapide",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "TempsTrajetPlusCourtRapide"
                         },
                         {
                           "key": "ModeTrajet",
-                          "value": "ModeTrajetPlusCourtRapide",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "ModeTrajetPlusCourtRapide"
                         },
                         {
                           "key": "DateReunion",
-                          "value": "DateReunion",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateReunion"
                         }
                       ],
                       "outputParams": [
                         {
                           "key": "DateDepart",
-                          "value": "DateDepart",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateDepart"
                         },
                         {
                           "key": "Modetrajet",
-                          "value": "Modetrajet",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "Modetrajet"
                         }
                       ]
                     },
-                    "children": []
+                    "children": [],
+                    "id": "0dd7bf73-ccbd-4ab0-b3dd-da3729cd8af3",
+                    "type": "action"
                   }
-                ]
+                ],
+                "id": "3810ee57-9191-441b-903a-e74ad8c30e78",
+                "type": "sequence"
               }
-            ]
+            ],
+            "id": "942f04d9-9b56-46bb-b007-f10d64eaa113",
+            "type": "priority"
           },
           {
-            "id": "fba2f087-a7a4-425b-83d6-fb6a1e1d75bc",
             "activated": true,
-            "type": "action",
             "metadata": {
               "label": "Meteo ",
               "itemTemplate": "BTActionNode.qml"
@@ -371,37 +401,42 @@
               "inputParams": [
                 {
                   "key": "EventID",
-                  "value": "EventID",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "EventID"
                 },
                 {
                   "key": "DateReunion",
-                  "value": "DateReunion",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "DateReunion"
                 },
                 {
                   "key": "DateDepart",
-                  "value": "DateDepart",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "DateDepart"
                 }
               ],
               "outputParams": [
                 {
                   "key": "MeteoDepart",
-                  "value": "MeteoDepart",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "MeteoDepart"
                 },
                 {
                   "key": "MeteoArrivee",
-                  "value": "MeteoArrivee",
-                  "type": "entityKnowledge"
+                  "type": "entityKnowledge",
+                  "value": "MeteoArrivee"
                 }
               ]
             },
-            "children": []
+            "children": [],
+            "id": "fba2f087-a7a4-425b-83d6-fb6a1e1d75bc",
+            "type": "action"
           }
-        ]
+        ],
+        "id": "39a049e0-98e6-4a6a-9708-ad4e58fd297d",
+        "type": "sequence"
       }
-    ]
+    ],
+    "id": "5954643f-8194-43e2-a7e6-8dd47e27ccc4"
   }
 ]
