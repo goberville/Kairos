@@ -221,7 +221,7 @@
                     "properties": {
                       "behavior": {
                         "type": "uriPath",
-                        "value": "KairosTraitement.bt"
+                        "value": "KairosTraitement1.bt"
                       },
                       "inputParams": []
                     },
