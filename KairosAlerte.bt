@@ -30,31 +30,20 @@
                 "activated": true,
                 "metadata": {
                   "label": "",
-                  "itemTemplate": "BTSequenceNode.qml"
+                  "itemTemplate": "BTConditionNode.qml"
                 },
-                "properties": {},
-                "children": [
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "",
-                      "itemTemplate": "BTConditionNode.qml"
-                    },
-                    "properties": {
-                      "op1": {
-                        "type": "entityKnowledge",
-                        "value": "MeteoDepart"
-                      },
-                      "op2": {
-                        "type": "string",
-                        "value": "sun"
-                      },
-                      "op": "=="
-                    },
-                    "children": [],
-                    "id": "5333a2ad-b25c-4e26-af7b-0fc489ee8142",
-                    "type": "condition"
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "MeteoDepart"
                   },
+                  "op2": {
+                    "type": "string",
+                    "value": "sun"
+                  },
+                  "op": "=="
+                },
+                "children": [
                   {
                     "activated": true,
                     "metadata": {
@@ -88,52 +77,40 @@
                     "type": "action"
                   }
                 ],
-                "id": "69266192-96aa-455f-8cce-6d7949865493",
-                "type": "sequence"
+                "id": "5333a2ad-b25c-4e26-af7b-0fc489ee8142",
+                "type": "condition"
               },
               {
                 "activated": true,
                 "metadata": {
-                  "label": "",
-                  "itemTemplate": "BTSequenceNode.qml"
+                  "label": "Calcul Alerte -60 mn Depart",
+                  "itemTemplate": "BTActionNode.qml"
                 },
-                "properties": {},
-                "children": [
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "Calcul Alerte -60 mn Depart",
-                      "itemTemplate": "BTActionNode.qml"
+                "properties": {
+                  "name": "Sum",
+                  "inputParams": [
+                    {
+                      "key": "DateDepart",
+                      "type": "entityKnowledge",
+                      "value": "DateDepart"
                     },
-                    "properties": {
-                      "name": "Sum",
-                      "inputParams": [
-                        {
-                          "key": "DateDepart",
-                          "type": "entityKnowledge",
-                          "value": "DateDepart"
-                        },
-                        {
-                          "key": "NbreMinuteAlerte",
-                          "type": "real",
-                          "value": "-3600"
-                        }
-                      ],
-                      "outputParams": [
-                        {
-                          "key": "DateDepart",
-                          "type": "entityKnowledge",
-                          "value": "DateDepart"
-                        }
-                      ]
-                    },
-                    "children": [],
-                    "id": "1e30ded3-429b-408e-95c9-69525d37f13f",
-                    "type": "action"
-                  }
-                ],
-                "id": "0d6fb7b9-20b9-4a93-b64d-98977d29a6fd",
-                "type": "sequence"
+                    {
+                      "key": "NbreMinuteAlerte",
+                      "type": "real",
+                      "value": "-3600"
+                    }
+                  ],
+                  "outputParams": [
+                    {
+                      "key": "DateDepart",
+                      "type": "entityKnowledge",
+                      "value": "DateDepart"
+                    }
+                  ]
+                },
+                "children": [],
+                "id": "1e30ded3-429b-408e-95c9-69525d37f13f",
+                "type": "action"
               }
             ],
             "id": "175150b2-4932-425e-907e-019fe3544d6c",
