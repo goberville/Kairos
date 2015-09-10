@@ -1,16 +1,15 @@
 [
   {
-    "version": "1.0.0"
+    "version": "1.2.0"
   },
   {
-    "uuid": "f0e0da26-c565-4b1a-82d1-d4d626ca1ca0",
-    "name": "KairosAlerte",
-    "description": "",
+    "metadata": {
+      "label": "KairosAlerte"
+    },
+    "properties": {},
     "children": [
       {
-        "id": "54431cc7-8d5e-4899-8b5c-6e496b360a67",
         "activated": true,
-        "type": "sequence",
         "metadata": {
           "label": "",
           "itemTemplate": "BTSequenceNode.qml"
@@ -18,9 +17,7 @@
         "properties": {},
         "children": [
           {
-            "id": "175150b2-4932-425e-907e-019fe3544d6c",
             "activated": true,
-            "type": "priority",
             "metadata": {
               "label": "",
               "itemTemplate": "BTSelectorPrio.qml"
@@ -30,9 +27,7 @@
             },
             "children": [
               {
-                "id": "69266192-96aa-455f-8cce-6d7949865493",
                 "activated": true,
-                "type": "sequence",
                 "metadata": {
                   "label": "",
                   "itemTemplate": "BTSequenceNode.qml"
@@ -40,30 +35,28 @@
                 "properties": {},
                 "children": [
                   {
-                    "id": "5333a2ad-b25c-4e26-af7b-0fc489ee8142",
                     "activated": true,
-                    "type": "condition",
                     "metadata": {
                       "label": "",
                       "itemTemplate": "BTConditionNode.qml"
                     },
                     "properties": {
                       "op1": {
-                        "value": "MeteoDepart",
-                        "type": "entityKnowledge"
+                        "type": "entityKnowledge",
+                        "value": "MeteoDepart"
                       },
                       "op2": {
-                        "value": "sun",
-                        "type": "string"
+                        "type": "string",
+                        "value": "sun"
                       },
                       "op": "=="
                     },
-                    "children": []
+                    "children": [],
+                    "id": "5333a2ad-b25c-4e26-af7b-0fc489ee8142",
+                    "type": "condition"
                   },
                   {
-                    "id": "ca9550c4-ec07-48cb-9a04-e6ff1322dffe",
                     "activated": true,
-                    "type": "action",
                     "metadata": {
                       "label": "Calcul Alerte - 30mn Depart",
                       "itemTemplate": "BTActionNode.qml"
@@ -73,31 +66,33 @@
                       "inputParams": [
                         {
                           "key": "DateDepart",
-                          "value": "DateDepart",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateDepart"
                         },
                         {
                           "key": "NbreMinuteAlerte",
-                          "value": "-1800",
-                          "type": "real"
+                          "type": "real",
+                          "value": "-1800"
                         }
                       ],
                       "outputParams": [
                         {
                           "key": "DateAlerte",
-                          "value": "DateAlerte",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateAlerte"
                         }
                       ]
                     },
-                    "children": []
+                    "children": [],
+                    "id": "ca9550c4-ec07-48cb-9a04-e6ff1322dffe",
+                    "type": "action"
                   }
-                ]
+                ],
+                "id": "69266192-96aa-455f-8cce-6d7949865493",
+                "type": "sequence"
               },
               {
-                "id": "0d6fb7b9-20b9-4a93-b64d-98977d29a6fd",
                 "activated": true,
-                "type": "sequence",
                 "metadata": {
                   "label": "",
                   "itemTemplate": "BTSequenceNode.qml"
@@ -105,9 +100,7 @@
                 "properties": {},
                 "children": [
                   {
-                    "id": "1e30ded3-429b-408e-95c9-69525d37f13f",
                     "activated": true,
-                    "type": "action",
                     "metadata": {
                       "label": "Calcul Alerte -60 mn Depart",
                       "itemTemplate": "BTActionNode.qml"
@@ -117,88 +110,110 @@
                       "inputParams": [
                         {
                           "key": "DateDepart",
-                          "value": "DateDepart",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateDepart"
                         },
                         {
                           "key": "NbreMinuteAlerte",
-                          "value": "-3600",
-                          "type": "real"
+                          "type": "real",
+                          "value": "-3600"
                         }
                       ],
                       "outputParams": [
                         {
                           "key": "DateDepart",
-                          "value": "DateDepart",
-                          "type": "entityKnowledge"
+                          "type": "entityKnowledge",
+                          "value": "DateDepart"
                         }
                       ]
                     },
-                    "children": []
+                    "children": [],
+                    "id": "1e30ded3-429b-408e-95c9-69525d37f13f",
+                    "type": "action"
                   }
-                ]
+                ],
+                "id": "0d6fb7b9-20b9-4a93-b64d-98977d29a6fd",
+                "type": "sequence"
               }
-            ]
+            ],
+            "id": "175150b2-4932-425e-907e-019fe3544d6c",
+            "type": "priority"
           },
           {
-            "id": "10a019ba-244d-4aba-8069-1eb98ba2c7ee",
             "activated": true,
-            "type": "condition",
             "metadata": {
-              "label": "",
-              "itemTemplate": "BTConditionNode.qml"
+              "label": ""
             },
             "properties": {
-              "op1": {
-                "value": "CurrenteDate",
-                "type": "entityKnowledge"
+              "active": "false"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTConditionNode.qml"
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "CurrenteDate"
+                  },
+                  "op2": {
+                    "type": "entityKnowledge",
+                    "value": "DateAlerte"
+                  },
+                  "op": "<"
+                },
+                "children": [],
+                "id": "10a019ba-244d-4aba-8069-1eb98ba2c7ee",
+                "type": "condition"
               },
-              "op2": {
-                "value": "DateAlerte",
-                "type": "entityKnowledge"
-              },
-              "op": ">="
-            },
-            "children": []
-          },
-          {
-            "id": "d64c9108-e51b-40e8-9569-64245f2f50f3",
-            "activated": true,
-            "type": "action",
-            "metadata": {
-              "label": "Send Msg Alerte",
-              "itemTemplate": "BTActionNode.qml"
-            },
-            "properties": {
-              "name": "Alerte",
-              "inputParams": [
-                {
-                  "key": "EventID",
-                  "value": "EventID",
-                  "type": "entityKnowledge"
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "Send Msg Alerte",
+                  "itemTemplate": "BTActionNode.qml"
                 },
-                {
-                  "key": "DateReunion",
-                  "value": "DateReunion",
-                  "type": "entityKnowledge"
+                "properties": {
+                  "name": "Alerte",
+                  "inputParams": [
+                    {
+                      "key": "EventID",
+                      "type": "entityKnowledge",
+                      "value": "EventID"
+                    },
+                    {
+                      "key": "DateReunion",
+                      "type": "entityKnowledge",
+                      "value": "DateReunion"
+                    },
+                    {
+                      "key": "DateDepart",
+                      "type": "entityKnowledge",
+                      "value": "DateDepart"
+                    },
+                    {
+                      "key": "Modetrajet",
+                      "type": "entityKnowledge",
+                      "value": "Modetrajet"
+                    }
+                  ],
+                  "outputParams": []
                 },
-                {
-                  "key": "DateDepart",
-                  "value": "DateDepart",
-                  "type": "entityKnowledge"
-                },
-                {
-                  "key": "Modetrajet",
-                  "value": "Modetrajet",
-                  "type": "entityKnowledge"
-                }
-              ],
-              "outputParams": []
-            },
-            "children": []
+                "children": [],
+                "id": "d64c9108-e51b-40e8-9569-64245f2f50f3",
+                "type": "action"
+              }
+            ],
+            "id": "83b99691-3efd-462f-8162-6914bac5eb30",
+            "type": "priority"
           }
-        ]
+        ],
+        "id": "54431cc7-8d5e-4899-8b5c-6e496b360a67",
+        "type": "sequence"
       }
-    ]
+    ],
+    "id": "f0e0da26-c565-4b1a-82d1-d4d626ca1ca0"
   }
 ]
