@@ -122,6 +122,22 @@
               "label": ""
             },
             "properties": {
+              "destination": "MeteoDepart",
+              "op": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            "children": [],
+            "id": "4679a026-7423-48c6-91ab-4473633b06e8",
+            "type": "set"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
               "destination": "PositionCurrent",
               "op": {
                 "type": "string",
