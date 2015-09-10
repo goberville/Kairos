@@ -11,143 +11,12 @@
       {
         "activated": true,
         "metadata": {
-          "label": "",
-          "itemTemplate": "BTSequenceNode.qml"
+          "label": ""
         },
-        "properties": {},
+        "properties": {
+          "active": "false"
+        },
         "children": [
-          {
-            "activated": true,
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSetNode.qml"
-            },
-            "properties": {
-              "destination": "TrajetPlusCourt",
-              "op": {
-                "type": "boolean",
-                "value": "false"
-              }
-            },
-            "children": [],
-            "id": "78b19787-7830-4e5d-b6ec-f4ea33640eb5",
-            "type": "set"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSetNode.qml"
-            },
-            "properties": {
-              "destination": "TrajetPlusRapide",
-              "op": {
-                "type": "boolean",
-                "value": "true"
-              }
-            },
-            "children": [],
-            "id": "e968056c-ffa1-41d6-8f02-c4c58cc390e7",
-            "type": "set"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSetNode.qml"
-            },
-            "properties": {
-              "destination": "TrajetMaxVelo",
-              "op": {
-                "type": "integer",
-                "value": "20000"
-              }
-            },
-            "children": [],
-            "id": "63e9e678-e536-45cb-8cba-2c32bc9b5466",
-            "type": "set"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": "",
-              "itemTemplate": "BTSetNode.qml"
-            },
-            "properties": {
-              "destination": "TrajetMaxPied",
-              "op": {
-                "type": "integer",
-                "value": "5000"
-              }
-            },
-            "children": [],
-            "id": "ec2e71dc-1bec-4c86-bb9f-38a92034ec40",
-            "type": "set"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {
-              "destination": "PositionCurrent",
-              "op": {
-                "type": "string",
-                "value": "\"\""
-              }
-            },
-            "children": [],
-            "id": "e449a933-1a52-4fa0-8cdf-237ec6177545",
-            "type": "set"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {
-              "destination": "ChangedPosition",
-              "op": {
-                "type": "boolean",
-                "value": "true"
-              }
-            },
-            "children": [],
-            "id": "8faadf15-789d-4e8f-899c-3e1bde19211f",
-            "type": "set"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {
-              "destination": "MeteoDepart",
-              "op": {
-                "type": "string",
-                "value": ""
-              }
-            },
-            "children": [],
-            "id": "4679a026-7423-48c6-91ab-4473633b06e8",
-            "type": "set"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {
-              "destination": "PositionCurrent",
-              "op": {
-                "type": "string",
-                "value": ""
-              }
-            },
-            "children": [],
-            "id": "33570de8-f36a-4a1a-9f8b-ea2803eb3059",
-            "type": "set"
-          },
           {
             "activated": true,
             "metadata": {
@@ -161,11 +30,156 @@
               },
               "op2": {
                 "type": "boolean",
-                "value": "true"
+                "value": "false"
               },
               "op": "=="
             },
-            "children": [],
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "",
+                  "itemTemplate": "BTSequenceNode.qml"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSetNode.qml"
+                    },
+                    "properties": {
+                      "destination": "TrajetPlusCourt",
+                      "op": {
+                        "type": "boolean",
+                        "value": "false"
+                      }
+                    },
+                    "children": [],
+                    "id": "78b19787-7830-4e5d-b6ec-f4ea33640eb5",
+                    "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSetNode.qml"
+                    },
+                    "properties": {
+                      "destination": "TrajetPlusRapide",
+                      "op": {
+                        "type": "boolean",
+                        "value": "true"
+                      }
+                    },
+                    "children": [],
+                    "id": "e968056c-ffa1-41d6-8f02-c4c58cc390e7",
+                    "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSetNode.qml"
+                    },
+                    "properties": {
+                      "destination": "TrajetMaxVelo",
+                      "op": {
+                        "type": "integer",
+                        "value": "20000"
+                      }
+                    },
+                    "children": [],
+                    "id": "63e9e678-e536-45cb-8cba-2c32bc9b5466",
+                    "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "",
+                      "itemTemplate": "BTSetNode.qml"
+                    },
+                    "properties": {
+                      "destination": "TrajetMaxPied",
+                      "op": {
+                        "type": "integer",
+                        "value": "5000"
+                      }
+                    },
+                    "children": [],
+                    "id": "ec2e71dc-1bec-4c86-bb9f-38a92034ec40",
+                    "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "destination": "PositionCurrent",
+                      "op": {
+                        "type": "string",
+                        "value": "\"\""
+                      }
+                    },
+                    "children": [],
+                    "id": "e449a933-1a52-4fa0-8cdf-237ec6177545",
+                    "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "destination": "ChangedPosition",
+                      "op": {
+                        "type": "boolean",
+                        "value": "true"
+                      }
+                    },
+                    "children": [],
+                    "id": "8faadf15-789d-4e8f-899c-3e1bde19211f",
+                    "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "destination": "MeteoDepart",
+                      "op": {
+                        "type": "string",
+                        "value": ""
+                      }
+                    },
+                    "children": [],
+                    "id": "4679a026-7423-48c6-91ab-4473633b06e8",
+                    "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "destination": "PositionCurrent",
+                      "op": {
+                        "type": "string",
+                        "value": ""
+                      }
+                    },
+                    "children": [],
+                    "id": "33570de8-f36a-4a1a-9f8b-ea2803eb3059",
+                    "type": "set"
+                  }
+                ],
+                "id": "83ac086a-69af-46cc-a8d3-0c3db5934f1c",
+                "type": "sequence"
+              }
+            ],
             "id": "55b99379-adc7-42d1-b6fc-e5122d0a653d",
             "type": "condition"
           },
@@ -272,8 +286,8 @@
             "type": "until"
           }
         ],
-        "id": "83ac086a-69af-46cc-a8d3-0c3db5934f1c",
-        "type": "sequence"
+        "id": "31c128a4-2daf-488e-aa5b-7d8b8a7495af",
+        "type": "priority"
       }
     ],
     "id": "ff9c54c9-8130-4e8f-995f-28536ce1c9fa"
